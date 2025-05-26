@@ -6,8 +6,15 @@ import SelectPaper from "./pages/SelectPaper";
 import Custom from "./pages/Custom";
 import Review from "./pages/Review";
 import './App.css';
+import { useEffect } from "react";
+import { initGA, logPageView } from "./ga";
 
 function App() {
+    useEffect(() => {
+    initGA();
+    logPageView(); // initial page load
+  }, []);
+
   return (
     <Router>
       <Navbar />
