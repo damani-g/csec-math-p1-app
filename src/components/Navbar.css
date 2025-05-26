@@ -1,0 +1,32 @@
+.navbar {
+  position: sticky;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navbar-bg, #282c34);
+  padding: 10px 20px;
+  color: white;
+}
+
+.nav-title a {
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links .active a,
+.nav-links a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,377 @@
+{
+  "questions": [
+    {
+      "id": "june2020_01",
+      "image": "questions/june2020_01.png",
+      "section": 1,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_02",
+      "image": "questions/june2020_02.png",
+      "section": 1,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_03",
+      "image": "questions/june2020_03.png",
+      "section": 1,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_04",
+      "image": "questions/june2020_04.png",
+      "section": 1,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_05",
+      "image": "questions/june2020_05.png",
+      "section": 1,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_06",
+      "image": "questions/june2020_06.png",
+      "section": 1,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_07",
+      "image": "questions/june2020_07.png",
+      "section": 3,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_08",
+      "image": "questions/june2020_08.png",
+      "section": 3,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_09",
+      "image": "questions/june2020_09.png",
+      "section": 3,
+      "answer": "A",
+      "stimulus_id": "june2020_stimulus_9_10"
+    },
+    {
+      "id": "june2020_10",
+      "image": "questions/june2020_10.png",
+      "section": 3,
+      "answer": "C",
+      "stimulus_id": "june2020_stimulus_9_10"
+    },
+    {
+      "id": "june2020_11",
+      "image": "questions/june2020_11.png",
+      "section": 3,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_12",
+      "image": "questions/june2020_12.png",
+      "section": 3,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_13",
+      "image": "questions/june2020_13.png",
+      "section": 2,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_14",
+      "image": "questions/june2020_14.png",
+      "section": 2,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_15",
+      "image": "questions/june2020_15.png",
+      "section": 6,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_16",
+      "image": "questions/june2020_16.png",
+      "section": 2,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_17",
+      "image": "questions/june2020_17.png",
+      "section": 2,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_18",
+      "image": "questions/june2020_18.png",
+      "section": 2,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_19",
+      "image": "questions/june2020_19.png",
+      "section": 2,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_20",
+      "image": "questions/june2020_20.png",
+      "section": 2,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_21",
+      "image": "questions/june2020_21.png",
+      "section": 6,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_22",
+      "image": "questions/june2020_22.png",
+      "section": 6,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_23",
+      "image": "questions/june2020_23.png",
+      "section": 6,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_24",
+      "image": "questions/june2020_24.png",
+      "section": 6,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_25",
+      "image": "questions/june2020_25.png",
+      "section": 6,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_26",
+      "image": "questions/june2020_26.png",
+      "section": 6,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_27",
+      "image": "questions/june2020_27.png",
+      "section": 9,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_28",
+      "image": "questions/june2020_28.png",
+      "section": 9,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_29",
+      "image": "questions/june2020_29.png",
+      "section": 9,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_30",
+      "image": "questions/june2020_30.png",
+      "section": 9,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_31",
+      "image": "questions/june2020_31.png",
+      "section": 4,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_32",
+      "image": "questions/june2020_32.png",
+      "section": 4,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_33",
+      "image": "questions/june2020_33.png",
+      "section": 4,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_34",
+      "image": "questions/june2020_34.png",
+      "section": 4,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_35",
+      "image": "questions/june2020_35.png",
+      "section": 4,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_36",
+      "image": "questions/june2020_36.png",
+      "section": 4,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_37",
+      "image": "questions/june2020_37.png",
+      "section": 4,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_38",
+      "image": "questions/june2020_38.png",
+      "section": 4,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_39",
+      "image": "questions/june2020_39.png",
+      "section": 5,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_40",
+      "image": "questions/june2020_40.png",
+      "section": 5,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_41",
+      "image": "questions/june2020_41.png",
+      "section": 5,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_42",
+      "image": "questions/june2020_42.png",
+      "section": 5,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_43",
+      "image": "questions/june2020_43.png",
+      "section": 5,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_44",
+      "image": "questions/june2020_44.png",
+      "section": 5,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_45",
+      "image": "questions/june2020_45.png",
+      "section": 7,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_46",
+      "image": "questions/june2020_46.png",
+      "section": 7,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_47",
+      "image": "questions/june2020_47.png",
+      "section": 7,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_48",
+      "image": "questions/june2020_48.png",
+      "section": 7,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_49",
+      "image": "questions/june2020_49.png",
+      "section": 7,
+      "answer": "A",
+      "stimulus_id": "june2020_stimulus_49_50"
+    },
+    {
+      "id": "june2020_50",
+      "image": "questions/june2020_50.png",
+      "section": 7,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_51",
+      "image": "questions/june2020_51.png",
+      "section": 7,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_52",
+      "image": "questions/june2020_52.png",
+      "section": 7,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_53",
+      "image": "questions/june2020_53.png",
+      "section": 8,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_54",
+      "image": "questions/june2020_54.png",
+      "section": 8,
+      "answer": "A"
+    },
+    {
+      "id": "june2020_55",
+      "image": "questions/june2020_55.png",
+      "section": 8,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_56",
+      "image": "questions/june2020_56.png",
+      "section": 8,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_57",
+      "image": "questions/june2020_57.png",
+      "section": 8,
+      "answer": "B"
+    },
+    {
+      "id": "june2020_58",
+      "image": "questions/june2020_58.png",
+      "section": 8,
+      "answer": "D"
+    },
+    {
+      "id": "june2020_59",
+      "image": "questions/june2020_59.png",
+      "section": 8,
+      "answer": "C"
+    },
+    {
+      "id": "june2020_60",
+      "image": "questions/june2020_60.png",
+      "section": 8,
+      "answer": "A"
+    }
+  ],
+  "stimuli": [
+    {
+      "id": "june2020_stimulus_49_50",
+      "image": "questions/june2020_stimulus_49_50.png"
+    },
+    {
+      "id": "june2020_stimulus_9_10",
+      "image": "questions/june2020_stimulus_9_10.png"
+    }
+  ]
+}

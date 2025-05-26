@@ -1,0 +1,378 @@
+{
+  "questions": [
+    {
+      "id": "june2023_01",
+      "image": "questions/june2023_01.png",
+      "section": 1,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_02",
+      "image": "questions/june2023_02.png",
+      "section": 1,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_03",
+      "image": "questions/june2023_03.png",
+      "section": 1,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_04",
+      "image": "questions/june2023_04.png",
+      "section": 1,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_05",
+      "image": "questions/june2023_05.png",
+      "section": 1,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_06",
+      "image": "questions/june2023_06.png",
+      "section": 1,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_07",
+      "image": "questions/june2023_07.png",
+      "section": 3,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_08",
+      "image": "questions/june2023_08.png",
+      "section": 3,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_09",
+      "image": "questions/june2023_09.png",
+      "section": 3,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_10",
+      "image": "questions/june2023_10.png",
+      "section": 3,
+      "answer": "A",
+      "stimulus_id": "june2023_stimulus_10_11"
+    },
+    {
+      "id": "june2023_11",
+      "image": "questions/june2023_11.png",
+      "section": 3,
+      "answer": "C",
+      "stimulus_id": "june2023_stimulus_10_11"
+    },
+    {
+      "id": "june2023_12",
+      "image": "questions/june2023_12.png",
+      "section": 3,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_13",
+      "image": "questions/june2023_13.png",
+      "section": 2,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_14",
+      "image": "questions/june2023_14.png",
+      "section": 2,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_15",
+      "image": "questions/june2023_15.png",
+      "section": 6,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_16",
+      "image": "questions/june2023_16.png",
+      "section": 2,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_17",
+      "image": "questions/june2023_17.png",
+      "section": 2,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_18",
+      "image": "questions/june2023_18.png",
+      "section": 2,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_19",
+      "image": "questions/june2023_19.png",
+      "section": 2,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_20",
+      "image": "questions/june2023_20.png",
+      "section": 2,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_21",
+      "image": "questions/june2023_21.png",
+      "section": 6,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_22",
+      "image": "questions/june2023_22.png",
+      "section": 6,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_23",
+      "image": "questions/june2023_23.png",
+      "section": 6,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_24",
+      "image": "questions/june2023_24.png",
+      "section": 6,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_25",
+      "image": "questions/june2023_25.png",
+      "section": 6,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_26",
+      "image": "questions/june2023_26.png",
+      "section": 6,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_27",
+      "image": "questions/june2023_27.png",
+      "section": 9,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_28",
+      "image": "questions/june2023_28.png",
+      "section": 9,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_29",
+      "image": "questions/june2023_29.png",
+      "section": 9,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_30",
+      "image": "questions/june2023_30.png",
+      "section": 9,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_31",
+      "image": "questions/june2023_31.png",
+      "section": 4,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_32",
+      "image": "questions/june2023_32.png",
+      "section": 4,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_33",
+      "image": "questions/june2023_33.png",
+      "section": 4,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_34",
+      "image": "questions/june2023_34.png",
+      "section": 4,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_35",
+      "image": "questions/june2023_35.png",
+      "section": 4,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_36",
+      "image": "questions/june2023_36.png",
+      "section": 4,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_37",
+      "image": "questions/june2023_37.png",
+      "section": 4,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_38",
+      "image": "questions/june2023_38.png",
+      "section": 4,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_39",
+      "image": "questions/june2023_39.png",
+      "section": 5,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_40",
+      "image": "questions/june2023_40.png",
+      "section": 5,
+      "answer": "C",
+      "stimulus_id": "june2023_stimulus_40_41"
+    },
+    {
+      "id": "june2023_41",
+      "image": "questions/june2023_41.png",
+      "section": 5,
+      "answer": "B",
+      "stimulus_id": "june2023_stimulus_40_41"
+    },
+    {
+      "id": "june2023_42",
+      "image": "questions/june2023_42.png",
+      "section": 5,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_43",
+      "image": "questions/june2023_43.png",
+      "section": 5,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_44",
+      "image": "questions/june2023_44.png",
+      "section": 5,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_45",
+      "image": "questions/june2023_45.png",
+      "section": 7,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_46",
+      "image": "questions/june2023_46.png",
+      "section": 7,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_47",
+      "image": "questions/june2023_47.png",
+      "section": 7,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_48",
+      "image": "questions/june2023_48.png",
+      "section": 7,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_49",
+      "image": "questions/june2023_49.png",
+      "section": 7,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_50",
+      "image": "questions/june2023_50.png",
+      "section": 7,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_51",
+      "image": "questions/june2023_51.png",
+      "section": 7,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_52",
+      "image": "questions/june2023_52.png",
+      "section": 7,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_53",
+      "image": "questions/june2023_53.png",
+      "section": 8,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_54",
+      "image": "questions/june2023_54.png",
+      "section": 8,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_55",
+      "image": "questions/june2023_55.png",
+      "section": 8,
+      "answer": "D"
+    },
+    {
+      "id": "june2023_56",
+      "image": "questions/june2023_56.png",
+      "section": 8,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_57",
+      "image": "questions/june2023_57.png",
+      "section": 8,
+      "answer": "A"
+    },
+    {
+      "id": "june2023_58",
+      "image": "questions/june2023_58.png",
+      "section": 8,
+      "answer": "C"
+    },
+    {
+      "id": "june2023_59",
+      "image": "questions/june2023_59.png",
+      "section": 8,
+      "answer": "B"
+    },
+    {
+      "id": "june2023_60",
+      "image": "questions/june2023_60.png",
+      "section": 8,
+      "answer": "C"
+    }
+  ],
+  "stimuli": [
+    {
+      "id": "june2023_stimulus_10_11",
+      "image": "questions/june2023_stimulus_10_11.png"
+    },
+    {
+      "id": "june2023_stimulus_40_41",
+      "image": "questions/june2023_stimulus_40_41.png"
+    }
+  ]
+}

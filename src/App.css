@@ -1,0 +1,133 @@
+/* ===== Reset & Base Styles ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.2s, color 0.2s;
+  min-height: 100vh;
+}
+
+/* ===== Light/Dark Theme Variables ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #f1f1f1;
+    --nav-bg: #1e1e1e;
+    --nav-border: #333;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --text: #222222;
+    --nav-bg: #eee;
+    --nav-border: #ccc;
+  }
+}
+
+/* ===== Navigation Bar ===== */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+/* ===== Page Content Wrapper ===== */
+.content {
+  padding-top: 4rem; /* ensures space below fixed nav */
+  padding-inline: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ===== Links ===== */
+a {
+  color: green;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.home-container {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.mode-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+.mode-button {
+  display: block;
+  padding: 1rem;
+  background-color: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.mode-button:hover {
+  background-color: #2563eb;
+}
+
+.options button.selected {
+  background-color: #4caf50;
+  color: white;
+}
+.timer-score {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Quiz Page Styles ===== */
+
+.options button {
+  padding: 10px 16px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.options button.selected {
+  background-color: black;
+  color: white;
+}
+
+.options button.correct {
+  background-color: green;
+  color: white;
+}
+
+.options button.incorrect {
+  background-color: red;
+  color: white;
+}

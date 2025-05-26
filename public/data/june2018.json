@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {"id": "2018_01", "year": 2018, "number": 1, "image": "questions/june2018_01.png", "section": 1, "answer": "B"},
+    {"id": "2018_02", "year": 2018, "number": 2, "image": "questions/june2018_02.png", "section": 1, "answer": "B"},
+    {"id": "2018_03", "year": 2018, "number": 3, "image": "questions/june2018_03.png", "section": 1, "answer": "A"},
+    {"id": "2018_04", "year": 2018, "number": 4, "image": "questions/june2018_04.png", "section": 1, "answer": "C"},
+    {"id": "2018_05", "year": 2018, "number": 5, "image": "questions/june2018_05.png", "section": 1, "answer": "A"},
+    {"id": "2018_06", "year": 2018, "number": 6, "image": "questions/june2018_06.png", "section": 1, "answer": "D"},
+    
+    {"id": "2018_07", "year": 2018, "number": 7, "image": "questions/june2018_07.png", "section": 3, "answer": "C"},
+    {"id": "2018_08", "year": 2018, "number": 8, "image": "questions/june2018_08.png", "section": 3, "answer": "A"},
+    {"id": "2018_09", "year": 2018, "number": 9, "image": "questions/june2018_09.png", "section": 3, "answer": "D"},
+    {"id": "2018_10", "year": 2018, "number": 10, "image": "questions/june2018_10.png", "section": 3, "answer": "C"},
+    {"id": "2018_11", "year": 2018, "number": 11, "image": "questions/june2018_11.png", "section": 3, "answer": "D"},
+    {"id": "2018_12", "year": 2018, "number": 12, "image": "questions/june2018_12.png", "section": 3, "answer": "B"},
+
+    {"id": "2018_13", "year": 2018, "number": 13, "image": "questions/june2018_13.png", "section": 2, "answer": "C"},
+    {"id": "2018_14", "year": 2018, "number": 14, "image": "questions/june2018_14.png", "section": 2, "answer": "D"},
+    {"id": "2018_15", "year": 2018, "number": 15, "image": "questions/june2018_15.png", "section": 2, "answer": "C"},
+    {"id": "2018_16", "year": 2018, "number": 16, "image": "questions/june2018_16.png", "section": 2, "answer": "B"},
+    {"id": "2018_17", "year": 2018, "number": 17, "image": "questions/june2018_17.png", "section": 2, "answer": "A"},
+    {"id": "2018_18", "year": 2018, "number": 18, "image": "questions/june2018_18.png", "section": 2, "answer": "B"},
+    {"id": "2018_19", "year": 2018, "number": 19, "image": "questions/june2018_19.png", "section": 2, "answer": "D"},
+    {"id": "2018_20", "year": 2018, "number": 20, "image": "questions/june2018_20.png", "section": 2, "answer": "C"},
+
+    {"id": "2018_21", "year": 2018, "number": 21, "image": "questions/june2018_21.png", "section": 6, "answer": "D"},
+    {"id": "2018_22", "year": 2018, "number": 22, "image": "questions/june2018_22.png", "section": 6, "answer": "D"},
+    {"id": "2018_23", "year": 2018, "number": 23, "image": "questions/june2018_23.png", "section": 6, "answer": "A"},
+    {"id": "2018_24", "year": 2018, "number": 24, "image": "questions/june2018_24.png", "section": 6, "answer": "D"},
+    {"id": "2018_25", "year": 2018, "number": 25, "image": "questions/june2018_25.png", "section": 6, "answer": "D"},
+    {"id": "2018_26", "year": 2018, "number": 26, "image": "questions/june2018_26.png", "section": 6, "answer": "B"},
+
+    {"id": "2018_27", "year": 2018, "number": 27, "image": "questions/june2018_27.png", "section": 9, "answer": "A", "stimulus_id": "june2018_stimulus_27_28"},
+    {"id": "2018_28", "year": 2018, "number": 28, "image": "questions/june2018_28.png", "section": 9, "answer": "B", "stimulus_id": "june2018_stimulus_27_28"},
+    
+    {"id": "2018_29", "year": 2018, "number": 29, "image": "questions/june2018_29.png", "section": 9, "answer": "A"},
+    {"id": "2018_30", "year": 2018, "number": 30, "image": "questions/june2018_30.png", "section": 9, "answer": "A"},
+    
+    {"id": "2018_31", "year": 2018, "number": 31, "image": "questions/june2018_31.png", "section": 4, "answer": "D"},
+    {"id": "2018_32", "year": 2018, "number": 32, "image": "questions/june2018_32.png", "section": 4, "answer": "B"},
+    {"id": "2018_33", "year": 2018, "number": 33, "image": "questions/june2018_33.png", "section": 4, "answer": "D"},
+    {"id": "2018_34", "year": 2018, "number": 34, "image": "questions/june2018_34.png", "section": 4, "answer": "A"},
+    {"id": "2018_35", "year": 2018, "number": 35, "image": "questions/june2018_35.png", "section": 4, "answer": "C"},
+    {"id": "2018_36", "year": 2018, "number": 36, "image": "questions/june2018_36.png", "section": 4, "answer": "C"},
+    {"id": "2018_37", "year": 2018, "number": 37, "image": "questions/june2018_37.png", "section": 4, "answer": "A"},
+    {"id": "2018_38", "year": 2018, "number": 38, "image": "questions/june2018_38.png", "section": 4, "answer": "B"},
+
+    {"id": "2018_39", "year": 2018, "number": 39, "image": "questions/june2018_39.png", "section": 5, "answer": "C", "stimulus_id": "june2018_stimulus_39_40"},
+    {"id": "2018_40", "year": 2018, "number": 40, "image": "questions/june2018_40.png", "section": 5, "answer": "B", "stimulus_id": "june2018_stimulus_39_40"},
+
+    {"id": "2018_41", "year": 2018, "number": 41, "image": "questions/june2018_41.png", "section": 5, "answer": "B"},
+    {"id": "2018_42", "year": 2018, "number": 42, "image": "questions/june2018_42.png", "section": 5, "answer": "C"},
+    {"id": "2018_43", "year": 2018, "number": 43, "image": "questions/june2018_43.png", "section": 5, "answer": "D"},
+    {"id": "2018_44", "year": 2018, "number": 44, "image": "questions/june2018_44.png", "section": 5, "answer": "C"},
+
+    {"id": "2018_45", "year": 2018, "number": 45, "image": "questions/june2018_45.png", "section": 7, "answer": "A"},
+    {"id": "2018_46", "year": 2018, "number": 46, "image": "questions/june2018_46.png", "section": 7, "answer": "D"},
+    {"id": "2018_47", "year": 2018, "number": 47, "image": "questions/june2018_47.png", "section": 7, "answer": "C"},
+    {"id": "2018_48", "year": 2018, "number": 48, "image": "questions/june2018_48.png", "section": 7, "answer": "D"},
+    {"id": "2018_49", "year": 2018, "number": 49, "image": "questions/june2018_49.png", "section": 7, "answer": "B"},
+    {"id": "2018_50", "year": 2018, "number": 50, "image": "questions/june2018_50.png", "section": 7, "answer": "A"},
+    {"id": "2018_51", "year": 2018, "number": 51, "image": "questions/june2018_51.png", "section": 7, "answer": "C"},
+    {"id": "2018_52", "year": 2018, "number": 52, "image": "questions/june2018_52.png", "section": 7, "answer": "A"},
+
+    {"id": "2018_53", "year": 2018, "number": 53, "image": "questions/june2018_53.png", "section": 8, "answer": "C"},
+    {"id": "2018_54", "year": 2018, "number": 54, "image": "questions/june2018_54.png", "section": 8, "answer": "A"},
+    {"id": "2018_55", "year": 2018, "number": 55, "image": "questions/june2018_55.png", "section": 8, "answer": "C"},
+    {"id": "2018_56", "year": 2018, "number": 56, "image": "questions/june2018_56.png", "section": 8, "answer": "D"},
+    {"id": "2018_57", "year": 2018, "number": 57, "image": "questions/june2018_57.png", "section": 8, "answer": "B"},
+    {"id": "2018_58", "year": 2018, "number": 58, "image": "questions/june2018_58.png", "section": 8, "answer": "C"},
+    {"id": "2018_59", "year": 2018, "number": 59, "image": "questions/june2018_59.png", "section": 8, "answer": "C"},
+    {"id": "2018_60", "year": 2018, "number": 60, "image": "questions/june2018_60.png", "section": 8, "answer": "A"}
+  ],
+  "stimuli": {
+    "2018_stimulus_27_28": {
+      "image": "questions/2018_stimulus_27_28.png",
+      "description": "Items 27–28 refer to the following diagram."
+    },
+    "2018_stimulus_39_40": {
+      "image": "questions/2018_stimulus_39_40.png",
+      "description": "Items 39–40 refer to the following chart."
+    }
+  }
+}
