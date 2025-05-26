@@ -6,10 +6,12 @@ import SelectPaper from "./pages/SelectPaper";
 import Custom from "./pages/Custom";
 import Review from "./pages/Review";
 import './App.css';
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   return (
     <Router>
+      <Analytics />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
