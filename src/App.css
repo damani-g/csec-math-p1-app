@@ -262,3 +262,29 @@ a:hover {
   background-color: var(--btn-bg);
   color: var(--btn-text);
 }
+
+.score-entry {
+  background-color: var(--btn-bg);
+  border: 1px solid var(--btn-border);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.score-entry p {
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+.score-entry small {
+  display: block;
+  margin-top: 0.5rem;
+  color: gray;
+}
+
+.score-entry ul {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+  font-size: 0.95rem;
+}
