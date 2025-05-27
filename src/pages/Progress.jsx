@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../AuthContext";
 import { db } from "../firebase";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import ScoreCharts from "./ScoreCharts";
 
 const SECTION_LABELS = {
   1: "Number Theory & Computation",
@@ -65,6 +66,7 @@ export default function Progress() {
           </li>
         ))}
       </ul>
+      <ScoreCharts scores={scores} />
     </div>
   );
 }
