@@ -3,7 +3,7 @@ import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBKXq1fnHDqNHv-zsHqm-Fdi9H4wSBWH2I",
-  authDomain: "https://csec-math-p1-app.vercel.app",
+  authDomain: "csec-math-app.firebaseapp.com",
   projectId: "csec-math-app",
   appId: "..."
 };
