@@ -58,7 +58,7 @@ nav {
 
 /* ===== Links ===== */
 a {
-  color: green;
+  color: gold;
   text-decoration: none;
   font-weight: 500;
 }
@@ -107,27 +107,40 @@ a:hover {
 /* ===== Quiz Page Styles ===== */
 
 .options button {
-  padding: 10px 16px;
-  margin: 4px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  margin: 0.5rem;
+  border: 2px solid #ccc;
   background-color: white;
-  color: black;
-  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .options button.selected {
-  background-color: black;
+  background-color: #444;
   color: white;
+  border-color: #444;
 }
 
 .options button.correct {
-  background-color: green;
+  background-color: #4CAF50; /* green */
   color: white;
 }
 
 .options button.incorrect {
-  background-color: red;
+  background-color: #F44336; /* red */
   color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.timer-score {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
