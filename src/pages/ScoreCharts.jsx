@@ -87,7 +87,7 @@ export default function ScoreCharts({ scores }) {
         type="category"
         dataKey="section"
         width={120}
-        tick={{ fontSize: 12 }}
+        tick={{ fontSize: 12, width: 140, wordBreak: "break-word" }}
         />
         <Tooltip />
         <Legend />
