@@ -5,6 +5,7 @@ import Quiz from "./pages/Quiz";
 import SelectPaper from "./pages/SelectPaper";
 import Custom from "./pages/Custom";
 import Review from "./pages/Review";
+import Login from "./pages/Login";
 import './App.css';
 import { useEffect } from "react";
 import { initGA, logPageView } from "./ga";
