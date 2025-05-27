@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { logQuizSubmitted } from "../ga";
 
 const SECTION_LABELS = {
