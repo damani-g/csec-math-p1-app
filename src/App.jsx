@@ -14,9 +14,14 @@ import { useEffect } from "react";
 import { initGA, logPageView } from "./ga";
 
 function App() {
-    useEffect(() => {
+  useEffect(() => {
     initGA();
     logPageView(); // initial page load
+  }, []);
+
+  useEffect(() => {
+    const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    document.body.classList.add(darkMode ? "dark" : "light");
   }, []);
 
   return (
