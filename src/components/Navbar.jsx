@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-title">
-        <Link to="/">CSEC Math</Link>
+        <Link to="/">Home</Link>
       </div>
       <ul className="nav-links">
         <li className={location.pathname.startsWith("/mock") ? "active" : ""}>
