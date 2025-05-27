@@ -76,15 +76,24 @@ export default function ScoreCharts({ scores }) {
       </ResponsiveContainer>
 
       <h4>Average Score by Section</h4>
-      <ResponsiveContainer width="100%" height={250}>
-        <BarChart data={sectionStats} layout="vertical" margin={{ top: 20, right: 30, left: 30, bottom: 5 }}>
-          <XAxis type="number" domain={[0, viewPercent ? 100 : "dataMax"]} />
-          <YAxis type="category" dataKey="section" />
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="score" fill="#82ca9d" />
-        </BarChart>
-      </ResponsiveContainer>
+    <ResponsiveContainer width="100%" height={300}>
+    <BarChart
+        data={sectionStats}
+        layout="vertical"
+        margin={{ top: 20, right: 30, left: 100, bottom: 5 }}
+    >
+        <XAxis type="number" domain={[0, viewPercent ? 100 : "dataMax"]} />
+        <YAxis
+        type="category"
+        dataKey="section"
+        width={120}
+        tick={{ fontSize: 12 }}
+        />
+        <Tooltip />
+        <Legend />
+        <Bar dataKey="score" fill="#82ca9d" />
+    </BarChart>
+    </ResponsiveContainer>
     </div>
   );
 }
