@@ -55,6 +55,8 @@ export default function Login() {
         <button type="submit">Login</button>
       </form>
 
+      <p>Don't have an account? <Link to="/signup">Sign up here</Link></p>
+
       {error && <p className="error-message">{error}</p>}
     </div>
   );
