@@ -29,7 +29,7 @@ export default function Navbar() {
         </li>
         <li>
         { user ? (
-              <button onClick={handleLogout}>Log Out</button>
+              <button className="nav-links" onClick={handleLogout}>Log Out</button>
           ) : (
             <Link to="/login">Sign In</Link>
         )}

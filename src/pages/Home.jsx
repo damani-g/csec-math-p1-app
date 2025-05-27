@@ -15,11 +15,11 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="home-container">
       <h2>Select a Mode</h2>
-      <button onClick={() => handleSelectMode("mock")}>Mock Exam Mode</button>
-      <button onClick={() => handleSelectMode("custom")}>Custom Exam Mode</button>
-      <button onClick={() => handleSelectMode("practice")}>Practice Mode</button>
+      <button className="mode-button" onClick={() => handleSelectMode("mock")}>Mock Exam Mode</button>
+      <button className="mode-button" onClick={() => handleSelectMode("custom")}>Custom Exam Mode</button>
+      <button className="mode-button" onClick={() => handleSelectMode("practice")}>Practice Mode</button>
     </div>
   );
 }
