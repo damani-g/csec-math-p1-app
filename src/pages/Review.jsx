@@ -56,7 +56,7 @@ export default function Review() {
       <button onClick={() => navigate("/")}>Return to Home</button>
 
       <div className="score-summary">
-        <h3>Total Score: {totalCorrect} / {questions.length}</h3>
+        <h3>Total Score: {totalCorrect} / {questions.length} - {Math.round((totalCorrect / questions.length) * 100)}</h3>
         <h4>Section Breakdown</h4>
         <ul>
           {Object.entries(sectionScores).map(([section, { correct, total }]) => (
