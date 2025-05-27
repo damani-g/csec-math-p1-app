@@ -5,6 +5,36 @@
   padding: 0;
 }
 
+:root {
+  --bg: #ffffff;
+  --text: #222222;
+  --nav-bg: #eee;
+  --nav-border: #ccc;
+  --btn-bg: #ffffff;
+  --btn-text: #222;
+  --btn-border: #ccc;
+  --btn-hover: #ddd;
+  --selected-bg: #444;
+  --selected-text: #fff;
+  --correct-bg: #4caf50;
+  --incorrect-bg: #f44336;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #f1f1f1;
+  --nav-bg: #1e1e1e;
+  --nav-border: #333;
+  --btn-bg: #333;
+  --btn-text: #eee;
+  --btn-border: #555;
+  --btn-hover: #444;
+  --selected-bg: #eee;
+  --selected-text: #222;
+  --correct-bg: #4caf50;
+  --incorrect-bg: #f44336;
+}
+
 body {
   font-family: system-ui, sans-serif;
   line-height: 1.6;
@@ -12,25 +42,6 @@ body {
   color: var(--text);
   transition: background-color 0.2s, color 0.2s;
   min-height: 100vh;
-}
-
-/* ===== Light/Dark Theme Variables ===== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #121212;
-    --text: #f1f1f1;
-    --nav-bg: #1e1e1e;
-    --nav-border: #333;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #ffffff;
-    --text: #222222;
-    --nav-bg: #eee;
-    --nav-border: #ccc;
-  }
 }
 
 /* ===== Navigation Bar ===== */
@@ -50,7 +61,7 @@ nav {
 
 /* ===== Page Content Wrapper ===== */
 .content {
-  padding-top: 4rem; /* ensures space below fixed nav */
+  padding-top: 4rem;
   padding-inline: 1rem;
   max-width: 800px;
   margin: auto;
@@ -94,40 +105,36 @@ a:hover {
   background-color: #2563eb;
 }
 
-.options button.selected {
-  background-color: #4caf50;
-  color: white;
-}
-.timer-score {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
 /* ===== Quiz Page Styles ===== */
-
 .options button {
   padding: 0.75rem 1.25rem;
   margin: 0.5rem;
-  border: 2px solid #ccc;
-  background-color: white;
+  border: 2px solid var(--btn-border);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
   cursor: pointer;
   font-weight: bold;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.options button:hover {
+  background-color: var(--btn-hover);
 }
 
 .options button.selected {
-  background-color: #444;
-  color: white;
-  border-color: #444;
+  background-color: var(--selected-bg);
+  color: var(--selected-text);
+  border-color: var(--selected-bg);
 }
 
 .options button.correct {
-  background-color: #4CAF50; /* green */
+  background-color: var(--correct-bg);
   color: white;
 }
 
 .options button.incorrect {
-  background-color: #F44336; /* red */
+  background-color: var(--incorrect-bg);
   color: white;
 }
 
@@ -143,4 +150,21 @@ a:hover {
   font-weight: bold;
   margin-bottom: 1rem;
   font-size: 1.1rem;
+}
+
+/* ===== Image Styling ===== */
+.question-image,
+.stimulus-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.quiz-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
 }
