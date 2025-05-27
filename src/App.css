@@ -168,3 +168,74 @@ a:hover {
   padding: 1rem;
   box-sizing: border-box;
 }
+
+/* ===== Review Page Styling ===== */
+.review-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.score-summary {
+  background-color: var(--btn-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.score-summary h3, .score-summary h4 {
+  margin-bottom: 0.5rem;
+}
+
+.score-summary ul {
+  list-style: none;
+  padding: 0;
+}
+
+.score-summary button {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0;
+  border: 2px solid var(--btn-border);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.score-summary button:hover {
+  background-color: var(--btn-hover);
+}
+
+.review-item {
+  padding: 1rem;
+  border-left: 4px solid transparent;
+  margin-bottom: 1.5rem;
+  background-color: var(--btn-bg);
+  border-radius: 6px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.05);
+}
+
+.review-item.correct {
+  border-color: var(--correct-bg);
+}
+
+.review-item.incorrect {
+  border-color: var(--incorrect-bg);
+}
+
+.review-item h4 {
+  margin-bottom: 0.5rem;
+}
+
+.review-item img {
+  margin: 1rem 0;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.review-item p {
+  margin: 0.5rem 0;
+}
