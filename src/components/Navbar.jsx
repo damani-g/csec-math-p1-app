@@ -27,21 +27,19 @@ export default function Navbar() {
         <li className={location.pathname.startsWith("/practice") ? "active" : ""}>
           <Link to="/practice">Practice</Link>
         </li>
+        <li>
         { user ? (
-          <ul>
-            <li>
               <button onClick={handleLogout}>Log Out</button>
-            </li>
-            <li>
-              <Link to="/account">My Account</Link>
-            </li>
-          </ul>
           ) : (
-          <li>
             <Link to="/login">Sign In</Link>
-          </li>
         )}
+        </li>
+        { user ? (
+          <li>
+            <Link to="/account">My Account</Link>
+          </li>
+        ) : null}
       </ul>
     </nav>
   );
-}
+} 
