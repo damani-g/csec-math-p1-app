@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
 
@@ -8,8 +8,9 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const provider = new GoogleAuthProvider();
 
-  const handleLogin = async (e) => {
+  const handleEmailLogin = async (e) => {
     e.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, email, password);
@@ -19,10 +20,24 @@ export default function Login() {
     }
   };
 
+  const handleGoogleLogin = async () => {
+    try {
+      await signInWithPopup(auth, provider);
+      navigate("/");
+    } catch (err) {
+      setError("Google sign-in failed.");
+    }
+  };
+
   return (
     <div className="login-container">
       <h2>Sign In</h2>
-      <form onSubmit={handleLogin}>
+
+      <button onClick={handleGoogleLogin}>Sign in with Google</button>
+
+      <hr />
+
+      <form onSubmit={handleEmailLogin}>
         <input
           type="email"
           placeholder="Email"
@@ -39,6 +54,7 @@ export default function Login() {
         />
         <button type="submit">Login</button>
       </form>
+
       {error && <p className="error-message">{error}</p>}
     </div>
   );
