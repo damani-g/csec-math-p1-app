@@ -1,6 +1,9 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { logQuizSubmitted } from "../ga";
+import { useAuth } from "../AuthContext";
+import { db } from "../firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 const SECTION_LABELS = {
   1: "Number Theory & Computation",
@@ -18,6 +21,7 @@ export default function Review() {
   const location = useLocation();
   const navigate = useNavigate();
   const { questions, userAnswers } = location.state || {};
+  const { user } = useAuth();
   const [activeSection, setActiveSection] = useState(null);
   const [showReviewList, setShowReviewList] = useState(true);
 
@@ -42,8 +46,25 @@ export default function Review() {
 
   useEffect(() => {
     const quizMode = location.state?.mode || "unknown";
-    const quizSection = location.state?.section || "full";
+    const quizSection = location.state?.section || null;
     logQuizSubmitted(quizMode, totalCorrect, quizSection);
+
+    if (user) {
+      const breakdown = {};
+      Object.entries(sectionScores).forEach(([section, { correct, total }]) => {
+        breakdown[section] = { correct, total };
+      });
+
+      const scoreRef = collection(db, "users", user.uid, "scores");
+      addDoc(scoreRef, {
+        mode: quizMode,
+        section: quizSection,
+        score: totalCorrect,
+        total: questions.length,
+        breakdown,
+        timestamp: serverTimestamp()
+      });
+    }
   }, []);
 
   const filteredQuestions = activeSection
