@@ -2,6 +2,7 @@ import { useAuth } from "../AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Account() {
   const { user } = useAuth();
@@ -22,6 +23,9 @@ export default function Account() {
       <p><strong>Email:</strong> {user.email}</p>
       <p><strong>UID:</strong> {user.uid}</p>
       <button onClick={handleLogout}>Log Out</button>
+      <div>
+        <button><Link to="/progress">My Progress</Link></button>
+      </div>
     </div>
   );
 }
