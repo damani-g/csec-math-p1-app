@@ -25,6 +25,7 @@ function App() {
         <Route path="/quiz/:paperId/:mode" element={<Quiz />} />
         <Route path="/custom" element={<Custom />} />
         <Route path="/review" element={<Review />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );

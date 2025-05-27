@@ -1,16 +1,25 @@
-import { Link } from "react-router-dom";
+import { useAuth } from "../AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-  return (
-    <div className="home-container">
-      <h1>CSEC Math Paper 1 Study Tool</h1>
-      <p>Select a mode to begin:</p>
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
-      <div className="mode-buttons">
-        <Link to="/mock" className="mode-button">Mock Exam Mode</Link>
-        <Link to="/custom" className="mode-button">Custom Exam Mode</Link>
-        <Link to="/practice" className="mode-button">Practice Mode</Link>
-      </div>
+  const handleSelectMode = (mode) => {
+    if (!user) {
+      alert("Please sign in to access study modes.");
+      navigate("/login"); // or open modal
+      return;
+    }
+    navigate(`/${mode}`);
+  };
+
+  return (
+    <div>
+      <h2>Select a Mode</h2>
+      <button onClick={() => handleSelectMode("mock")}>Mock Exam Mode</button>
+      <button onClick={() => handleSelectMode("custom")}>Custom Exam Mode</button>
+      <button onClick={() => handleSelectMode("practice")}>Practice Mode</button>
     </div>
   );
 }

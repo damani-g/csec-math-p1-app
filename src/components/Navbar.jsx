@@ -19,6 +19,9 @@ export default function Navbar() {
         <li className={location.pathname.startsWith("/practice") ? "active" : ""}>
           <Link to="/practice">Practice</Link>
         </li>
+        <li>
+          <Link to="/login">Sign In</Link>
+        </li>
       </ul>
     </nav>
   );
