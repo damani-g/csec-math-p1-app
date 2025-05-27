@@ -9,3 +9,18 @@ export const initGA = () => {
 export const logPageView = () => {
   ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 };
+
+export const logQuizStarted = (mode, section = null) => {
+  ReactGA.event("quiz_start", {
+    mode,
+    section: section || "full"
+  });
+};
+
+export const logQuizSubmitted = (mode, score, section = null) => {
+  ReactGA.event("quiz_submit", {
+    mode,
+    score,
+    section: section || "full"
+  });
+};

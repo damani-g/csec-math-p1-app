@@ -1,5 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { logQuizSubmitted } from "../ga";
 
 const SECTION_LABELS = {
   1: "Number Theory & Computation",
@@ -38,6 +39,12 @@ export default function Review() {
       totalCorrect++;
     }
   });
+
+  useEffect(() => {
+    const quizMode = location.state?.mode || "unknown";
+    const quizSection = location.state?.section || "full";
+    logQuizSubmitted(quizMode, totalCorrect, quizSection);
+  }, []);
 
   const filteredQuestions = activeSection
     ? questions.filter(q => q.section === parseInt(activeSection))

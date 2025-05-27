@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { logQuizStarted } from "../ga";
 
 const SECTION_LABELS = {
   1: "Number Theory & Computation",
@@ -58,6 +59,7 @@ export default function Quiz() {
     setStimulusId(loadedQuestions?.[0]?.stimulus_id || null);
     setShowAnswer(false);
     setHasInitialized(true);
+    logQuizStarted(mode, location.state?.section);
   }, [hasInitialized, isCustom, paperId, location]);
 
   const question = questions[current];
@@ -113,7 +115,9 @@ export default function Quiz() {
     navigate("/review", {
       state: {
         questions,
-        userAnswers
+        userAnswers,
+        mode,
+        section: location.state?.section || null
       }
     });
   }
