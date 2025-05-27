@@ -46,7 +46,7 @@ export default function Progress() {
         {scores.map(score => (
           <li key={score.id} className="score-entry">
             <p>
-              <strong>{score.mode.toUpperCase()}</strong> | {score.section ? `Section ${score.section}` : "Full Exam"} | 
+              <strong>{score.mode.toUpperCase()}</strong> | {(score.breakdown.keys().length() > 1) ? `Section ${score.breakdown.keys()[0]}` : "Full Exam"} | 
               Score: {score.score} / {score.total} ({Math.round((score.score / score.total) * 100)}%)
             </p>
             <small>{new Date(score.timestamp?.seconds * 1000).toLocaleString()}</small>

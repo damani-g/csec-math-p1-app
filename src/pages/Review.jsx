@@ -56,7 +56,6 @@ export default function Review() {
       });
 
       const scoreRef = collection(db, "users", user.uid, "scores");
-      if (breakdown.keys().length() > 1) quizSection = breakdown.keys()[0];
       addDoc(scoreRef, {
         mode: quizMode,
         section: quizSection,
