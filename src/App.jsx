@@ -7,6 +7,7 @@ import Custom from "./pages/Custom";
 import Review from "./pages/Review";
 import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
+import Account from "./pages/Account";
 import './App.css';
 import { useEffect } from "react";
 import { initGA, logPageView } from "./ga";
@@ -29,6 +30,7 @@ function App() {
         <Route path="/review" element={<Review />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/account" element={<Account />} />
       </Routes>
     </Router>
   );
