@@ -44,7 +44,6 @@ export default function ScoreCharts({ scores }) {
           <option value="all">All</option>
           <option value="mock">Mock</option>
           <option value="custom">Custom</option>
-          <option value="practice">Practice</option>
         </select>
 
         <label style={{ marginLeft: "1em" }}>Display as: </label>
