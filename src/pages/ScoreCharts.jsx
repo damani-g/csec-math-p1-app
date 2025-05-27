@@ -4,6 +4,18 @@ import {
   BarChart, Bar, Legend, ResponsiveContainer
 } from "recharts";
 
+const SECTION_LABELS = {
+  1: "Number Theory & Computation",
+  2: "Consumer Arithmetic",
+  3: "Sets",
+  4: "Measurement",
+  5: "Statistics",
+  6: "Algebra",
+  7: "Relations, Functions & Graphs",
+  8: "Geometry & Trigonometry",
+  9: "Vectors & Matrices"
+};
+
 export default function ScoreCharts({ scores }) {
   const [filterMode, setFilterMode] = useState("all");
   const [viewPercent, setViewPercent] = useState(true);
@@ -24,7 +36,7 @@ export default function ScoreCharts({ scores }) {
       });
     });
     return Object.entries(totals).map(([sec, val]) => ({
-      section: `S${sec}`,
+      section: `${SECTION_LABELS[sec]}`,
       score: viewPercent ? Math.round((val.correct / val.total) * 100) : val.correct
     }));
   }, [filtered, viewPercent]);
