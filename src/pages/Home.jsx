@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <div className="home-container">
-      <h1>Welcome to CSEC Math Study</h1>
+      <h1>CSEC Math Paper 1 Study Tool</h1>
       <p>Select a mode to begin:</p>
 
       <div className="mode-buttons">
