@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
-import "./Navbar.css"; // optional, for custom styling
 
 export default function Navbar() {
   const location = useLocation();

@@ -41,32 +41,35 @@ export default function Progress() {
   if (scores.length === 0) return <p>No quiz scores recorded yet.</p>;
 
   return (
-    <div className="progress-container">
-      <h2>My Progress</h2>
-      <ul>
-        {scores.map(score => (
-          <li key={score.id} className="score-entry">
-            <p>
-            <strong>{score.mode.toUpperCase()}</strong> | 
-            {(Object.keys(score.breakdown).length === 1)
-                ? `Section ${Object.keys(score.breakdown)[0]}`
-                : "Full Exam"} | 
-            Score: {score.score} / {score.total} ({Math.round((score.score / score.total) * 100)}%)
-            </p>
-            <small>{new Date(score.timestamp?.seconds * 1000).toLocaleString()}</small>
-            {score.breakdown && (
-              <ul>
-                {Object.entries(score.breakdown).map(([sec, val]) => (
-                  <li key={sec}>
-                    {SECTION_LABELS[sec]}: {val.correct}/{val.total} ({Math.round((val.correct / val.total) * 100)}%)
-                  </li>
-                ))}
-              </ul>
-            )}
-          </li>
-        ))}
-      </ul>
-      <ScoreCharts scores={scores} />
+    <div className="content">
+      <div className="progress-container">
+        <h2>My Progress</h2>
+        <ul>
+          {scores.map(score => (
+            <li key={score.id} className="score-entry">
+              <p>
+              <strong>{score.mode.toUpperCase()}</strong> | 
+              {(Object.keys(score.breakdown).length === 1)
+                  ? `Section ${Object.keys(score.breakdown)[0]}`
+                  : "Full Exam"} | 
+              Score: {score.score} / {score.total} ({Math.round((score.score / score.total) * 100)}%)
+              </p>
+              <small>{new Date(score.timestamp?.seconds * 1000).toLocaleString()}</small>
+              {score.breakdown && (
+                <ul>
+                  {Object.entries(score.breakdown).map(([sec, val]) => (
+                    <li key={sec}>
+                      {SECTION_LABELS[sec]}: {val.correct}/{val.total} ({Math.round((val.correct / val.total) * 100)}%)
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          ))}
+        </ul>
+        <ScoreCharts scores={scores} />
+      </div>
     </div>
+    
   );
 }

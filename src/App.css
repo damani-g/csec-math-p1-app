@@ -44,12 +44,20 @@ body {
   min-height: 100vh;
 }
 
+body, #root {
+  display: block;
+  width: 100%;
+}
+
 /* ===== Page Content Wrapper ===== */
 .content {
   padding-top: 4rem;
   padding-inline: 1rem;
-  max-width: 800px;
-  margin: auto;
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
 }
 
 /* ===== Links ===== */
@@ -63,10 +71,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.home-container {
-  text-align: center;
-  margin-top: 3rem;
-}
 
 .mode-buttons {
   display: flex;
@@ -91,6 +95,12 @@ a:hover {
 }
 
 /* ===== Quiz Page Styles ===== */
+.options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .options button {
   padding: 0.75rem 1.25rem;
   margin: 0.5rem;
@@ -160,6 +170,10 @@ a:hover {
   max-width: 800px;
   margin: 2rem auto;
   padding: 1rem;
+}
+
+.review-container button {
+  margin: 1rem auto;
 }
 
 .score-summary {
@@ -309,6 +323,15 @@ a:hover {
   color: var(--btn-text);
 }
 
+.google-login-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.login-container hr {
+  margin: 0.5rem 0;
+}
+
 .login-container button {
   background-color: #3b82f6;
   color: white;
@@ -320,14 +343,49 @@ a:hover {
   transition: background-color 0.2s;
 }
 
+.login-container form button {
+  margin-bottom: 0.5rem;
+}
+
 .login-container button:hover {
   background-color: #2563eb;
 }
+
+
 
 .error-message {
   color: red;
   font-size: 0.9rem;
   margin-top: -0.5rem;
+}
+
+/* ===== Select Paper Page Styling ===== */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.page h1 {
+  text-align: center;
+}
+
+.page ul {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.page ul li {
+  padding-left: 2rem;
+  margin-top: 0.5rem;
+  background-image: url(src/assets/quiz.svg);
+  background-position: 0 0;
+  background-size: 1.5rem 1.5rem;
+  background-repeat: no-repeat;
 }
 
 /* ===== Account Page Styling ===== */
@@ -350,7 +408,6 @@ a:hover {
   justify-content: center;
   text-align: center;
   min-height: 70vh;
-  padding: 2rem;
 }
 
 .home-container h1 {
@@ -393,21 +450,30 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0; /* ensures full width */
+  width: 100vw; /* ensures full viewport width */
+  background-color: var(--nav-bg);
+  color: var(--text);
   padding: 1rem 2rem;
-  background: var(--nav-bg);
   border-bottom: 1px solid var(--nav-border);
   z-index: 1000;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
 }
 
 .nav-links a, nav button {
@@ -418,9 +484,50 @@ nav {
   cursor: pointer;
   font-weight: 500;
   font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  display: subgrid;
 }
 
 .nav-links a:hover,
 nav button:hover {
   text-decoration: underline;
+}
+
+/* ===== Custom Page Styling ===== */
+
+.custom-mode{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-practice{
+  background-color: var(--btn-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-exam{
+  background-color: var(--btn-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-practice * {
+  margin: 0.25rem 0;
+}
+
+.full-exam * {
+  margin: 0.25rem 0;
 }

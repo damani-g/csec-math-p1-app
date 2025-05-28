@@ -20,7 +20,8 @@ export default function SignUp() {
   };
 
   return (
-    <div className="signup-container">
+    <div className="content">
+      <div className="signup-container">
       <h2>Create an Account</h2>
       <form onSubmit={handleSignUp}>
         <input
@@ -40,6 +41,7 @@ export default function SignUp() {
         <button type="submit">Sign Up</button>
       </form>
       {error && <p className="error-message">{error}</p>}
+    </div>
     </div>
   );
 }

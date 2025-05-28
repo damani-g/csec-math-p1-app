@@ -72,58 +72,60 @@ export default function Review() {
     : [];
 
   return (
-    <div className="review-container">
-      <h2>Quiz Review</h2>
-      <button onClick={() => navigate("/")}>Return to Home</button>
+    <div className="content">
+      <div className="review-container">
+        <h2>Quiz Review</h2>
+        <button onClick={() => navigate("/")}>Return to Home</button>
 
-      <div className="score-summary">
-        <h3>Total Score: {totalCorrect} / {questions.length} - {Math.round((totalCorrect / questions.length) * 100)}</h3>
-        <h4>Section Breakdown</h4>
-        <ul>
-          {Object.entries(sectionScores).map(([section, { correct, total }]) => (
-            <li key={section}>
-              <button onClick={() => setActiveSection(section)}>
-                {SECTION_LABELS[section]} – {correct}/{total} – {Math.round((correct / total) * 100)}%
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {activeSection && (
-        <div className="review-list">
-          <h3>{SECTION_LABELS[activeSection]}</h3>
-          <button onClick={() => setShowReviewList(!showReviewList)}>
-            {showReviewList ? "Hide" : "Show"} Questions for {SECTION_LABELS[activeSection]}
-          </button>
-          {showReviewList && filteredQuestions.map((q, index) => {
-            const userAnswer = userAnswers[q.id];
-            const isCorrect = userAnswer === q.answer;
-
-            return (
-              <div key={q.id} className={`review-item ${isCorrect ? "correct" : "incorrect"}`}>
-                <h4>
-                  Question {questions.indexOf(q) + 1} {isCorrect ? "✅" : "❌"}
-                </h4>
-                {q.stimulus_id && (
-                  <img
-                    src={`/questions/${q.stimulus_id}.png`}
-                    alt={`Stimulus for ${q.id}`}
-                    className="stimulus-image"
-                  />
-                )}
-                <img
-                  src={`/${q.image}`}
-                  alt={`Question ${q.id}`}
-                  className="question-image"
-                />
-                <p>Your answer: <strong>{userAnswer || "None selected"}</strong></p>
-                <p>Correct answer: <strong>{q.answer}</strong></p>
-              </div>
-            );
-          })}
+        <div className="score-summary">
+          <h3>Total Score: {totalCorrect} / {questions.length} - {Math.round((totalCorrect / questions.length) * 100)}</h3>
+          <h4>Section Breakdown</h4>
+          <ul>
+            {Object.entries(sectionScores).map(([section, { correct, total }]) => (
+              <li key={section}>
+                <button onClick={() => setActiveSection(section)}>
+                  {SECTION_LABELS[section]} – {correct}/{total} – {Math.round((correct / total) * 100)}%
+                </button>
+              </li>
+            ))}
+          </ul>
         </div>
-      )}
+
+        {activeSection && (
+          <div className="review-list">
+            <h3>{SECTION_LABELS[activeSection]}</h3>
+            <button onClick={() => setShowReviewList(!showReviewList)}>
+              {showReviewList ? "Hide" : "Show"} Questions for {SECTION_LABELS[activeSection]}
+            </button>
+            {showReviewList && filteredQuestions.map((q, index) => {
+              const userAnswer = userAnswers[q.id];
+              const isCorrect = userAnswer === q.answer;
+
+              return (
+                <div key={q.id} className={`review-item ${isCorrect ? "correct" : "incorrect"}`}>
+                  <h4>
+                    Question {questions.indexOf(q) + 1} {isCorrect ? "✅" : "❌"}
+                  </h4>
+                  {q.stimulus_id && (
+                    <img
+                      src={`/questions/${q.stimulus_id}.png`}
+                      alt={`Stimulus for ${q.id}`}
+                      className="stimulus-image"
+                    />
+                  )}
+                  <img
+                    src={`/${q.image}`}
+                    alt={`Question ${q.id}`}
+                    className="question-image"
+                  />
+                  <p>Your answer: <strong>{userAnswer || "None selected"}</strong></p>
+                  <p>Correct answer: <strong>{q.answer}</strong></p>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

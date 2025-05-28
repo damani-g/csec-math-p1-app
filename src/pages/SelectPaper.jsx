@@ -17,15 +17,18 @@ const papers = [
 export default function SelectPaper({mode}) {
   
   return (
-    <div className="page">
-      <h1>Select a Paper for {mode.charAt(0).toUpperCase()+mode.slice(1)} Mode</h1>
-      <ul>
-        {papers.map(paper => (
-          <li key={paper.id}>
-            <Link to={`/quiz/${paper.id}/${mode}`}>{paper.name}</Link>
-          </li>
-        ))}
-      </ul>
+    <div className="content">
+      <div className="page">
+        <h1>Select a Paper for {mode.charAt(0).toUpperCase()+mode.slice(1)} Mode</h1>
+        <ul>
+          {papers.map(paper => (
+            <li key={paper.id}>
+              <Link to={`/quiz/${paper.id}/${mode}`}>{paper.name}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
+    
   );
 }

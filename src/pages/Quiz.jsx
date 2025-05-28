@@ -153,154 +153,157 @@ export default function Quiz() {
   }
 
   return (
-    <div className="quiz-container">
-      <h2>
-        Question {current + 1} of {questions.length}
-      </h2>
+    <div className="content">
+      <div className="quiz-container">
+        <h2>
+          Question {current + 1} of {questions.length}
+        </h2>
 
-      {(isMock || (isCustom && questions.length === 60)) && (
-        <div className="timer-score">
-          <p>Time left: {formatTime(timeLeft)}</p>
-        </div>
-      )}
-
-      <div className="question-select">
-        <label htmlFor="questionDropdown">Jump to Question: </label>
-        <select
-          id="questionDropdown"
-          value={current}
-          onChange={(e) => setCurrent(Number(e.target.value))}
-        >
-          {questions.map((q, index) => (
-            <option key={q.id} value={index}>
-              Question {index + 1} {userAnswers[q.id] ? "✔" : ""}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {(isPractice || isCustom) && (
-        <div className="toggles">
-          <label>
-            <input
-              type="checkbox"
-              checked={showSection}
-              onChange={() => setShowSection(!showSection)}
-            />
-            Show Section
-          </label>
-        </div>
-      )}
-      {isPractice && (
-        <div>
-          <label>
-            <input
-              type="checkbox"
-              checked={showAnswer}
-              onChange={() => setShowAnswer(!showAnswer)}
-            />
-            Show Answer
-          </label>
-        </div>
-      )}
-
-      {stimulusId && (
-        <img
-          src={`/questions/${stimulusId}.png`}
-          alt={`Stimulus for ${question.id}`}
-          className="stimulus-image"
-        />
-      )}
-
-      <img
-        src={`/${question.image}`}
-        alt={`Question ${question.id}`}
-        className="question-image"
-      />
-
-      <div className="options">
-        {"ABCD".split("").map(letter => {
-          let btnClass = "";
-
-          if (userAnswers[question.id] === letter) {
-            btnClass = "selected";
-            if ((isPractice || isCustom) && showAnswer) {
-              btnClass = letter === question.answer ? "correct" : "incorrect";
-            }
-          }
-
-          return (
-            <button
-              key={letter}
-              className={btnClass}
-              onClick={() => handleAnswer(letter)}
-            >
-              {letter}
-            </button>
-          );
-        })}
-
-        {userAnswers[question.id] && (
-          <p style={{ color: "green", marginTop: "0.5rem" }}>
-            Selected Answer: {userAnswers[question.id]}
-          </p>
+        {(isMock || (isCustom && questions.length === 60)) && (
+          <div className="timer-score">
+            <p>Time left: {formatTime(timeLeft)}</p>
+          </div>
         )}
-        {!userAnswers[question.id] && (
-          <p style={{ color: "red", marginTop: "0.5rem" }}>
-            No answer selected.
-          </p>
-        )}
-      </div>
 
-      {showSection && (isPractice || isCustom) && (
-        <p className="section-label">
-          Section {question.section}: {SECTION_LABELS[question.section]}
-        </p>
-      )}
-
-      <div className="navigation">
-        <button onClick={handleBack} disabled={current === 0}>
-          Back
-        </button>
-        {!isMock && (
-          <button onClick={() => setShowAnswer(!showAnswer)}>
-            Toggle Answer
-          </button>
-        )}
-        <button
-          onClick={handleNext}
-          disabled={current === questions.length - 1}
-        >
-          Next
-        </button>
-      </div>
-
-      {current === questions.length - 1 && (isMock || isCustom) && (
-        <button onClick={handleSubmit}>Submit Quiz</button>
-      )}
-
-      {score !== null && (
-        <div className="score">
-          <h3>Quiz Complete!</h3>
-          <p>Score: {score} / {questions.length}</p>
-          <p>Percentage: {(score / questions.length * 100).toFixed(1)}%</p>
-        </div>
-      )}
-
-      {score !== null && Object.keys(perSectionScore).length > 0 && (
-        <div className="section-breakdown">
-          <h4>Section Breakdown</h4>
-          <ul>
-            {Object.entries(perSectionScore).map(([section, { correct, total }]) => (
-              <li key={section}>
-                {SECTION_LABELS[section]} – {correct} / {total} – {Math.round((correct / total) * 100)}%
-              </li>
+        <div className="question-select">
+          <label htmlFor="questionDropdown">Jump to Question: </label>
+          <select
+            id="questionDropdown"
+            value={current}
+            onChange={(e) => setCurrent(Number(e.target.value))}
+          >
+            {questions.map((q, index) => (
+              <option key={q.id} value={index}>
+                Question {index + 1} {userAnswers[q.id] ? "✔" : ""}
+              </option>
             ))}
-          </ul>
+          </select>
         </div>
-      )}
 
-      {showAnswer && !isMock && <p className="answer">Answer: {question.answer}</p>}
+        {(isPractice || isCustom) && (
+          <div className="toggles">
+            <label>
+              <input
+                type="checkbox"
+                checked={showSection}
+                onChange={() => setShowSection(!showSection)}
+              />
+              Show Section
+            </label>
+          </div>
+        )}
+        {isPractice && (
+          <div>
+            <label>
+              <input
+                type="checkbox"
+                checked={showAnswer}
+                onChange={() => setShowAnswer(!showAnswer)}
+              />
+              Show Answer
+            </label>
+          </div>
+        )}
+
+        {stimulusId && (
+          <img
+            src={`/questions/${stimulusId}.png`}
+            alt={`Stimulus for ${question.id}`}
+            className="stimulus-image"
+          />
+        )}
+
+        <img
+          src={`/${question.image}`}
+          alt={`Question ${question.id}`}
+          className="question-image"
+        />
+
+        <div className="options">
+          {"ABCD".split("").map(letter => {
+            let btnClass = "";
+
+            if (userAnswers[question.id] === letter) {
+              btnClass = "selected";
+              if ((isPractice || isCustom) && showAnswer) {
+                btnClass = letter === question.answer ? "correct" : "incorrect";
+              }
+            }
+            
+            return (
+              <button
+                key={letter}
+                className={btnClass}
+                onClick={() => handleAnswer(letter)}
+              >
+                {letter}
+              </button>
+            );
+          })}
+        </div>
+        <div className="selection-info">
+          {userAnswers[question.id] && (
+            <p style={{ color: "green", marginTop: "0.5rem" }}>
+              Selected Answer: {userAnswers[question.id]}
+            </p>
+          )}
+          {!userAnswers[question.id] && (
+            <p style={{ color: "red", marginTop: "0.5rem" }}>
+              No answer selected.
+            </p>
+          )}
+        </div>
+
+        {showSection && (isPractice || isCustom) && (
+          <p className="section-label">
+            Section {question.section}: {SECTION_LABELS[question.section]}
+          </p>
+        )}
+
+        <div className="navigation">
+          <button onClick={handleBack} disabled={current === 0}>
+            Back
+          </button>
+          {!isMock && (
+            <button onClick={() => setShowAnswer(!showAnswer)}>
+              Toggle Answer
+            </button>
+          )}
+          <button
+            onClick={handleNext}
+            disabled={current === questions.length - 1}
+          >
+            Next
+          </button>
+        </div>
+
+        {current === questions.length - 1 && (isMock || isCustom) && (
+          <button onClick={handleSubmit}>Submit Quiz</button>
+        )}
+
+        {score !== null && (
+          <div className="score">
+            <h3>Quiz Complete!</h3>
+            <p>Score: {score} / {questions.length}</p>
+            <p>Percentage: {(score / questions.length * 100).toFixed(1)}%</p>
+          </div>
+        )}
+
+        {score !== null && Object.keys(perSectionScore).length > 0 && (
+          <div className="section-breakdown">
+            <h4>Section Breakdown</h4>
+            <ul>
+              {Object.entries(perSectionScore).map(([section, { correct, total }]) => (
+                <li key={section}>
+                  {SECTION_LABELS[section]} – {correct} / {total} – {Math.round((correct / total) * 100)}%
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {showAnswer && !isMock && <p className="answer">Answer: {question.answer}</p>}
+      </div>
     </div>
   );
 }

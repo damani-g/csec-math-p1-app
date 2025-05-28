@@ -73,63 +73,67 @@ export default function Custom() {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="custom-mode">
-      <h2>Custom Mode</h2>
-      <div>
-        <label>Select Section for Practice:</label>
-        <select
-          value={selectedSection || ""}
-          onChange={(e) => setSelectedSection(parseInt(e.target.value))}
-        >
-          <option value="" disabled>Select a section</option>
-          <option value="1">1. Number Theory & Computation</option>
-          <option value="2">2. Consumer Arithmetic</option>
-          <option value="3">3. Sets</option>
-          <option value="4">4. Measurement</option>
-          <option value="5">5. Statistics</option>
-          <option value="6">6. Algebra</option>
-          <option value="7">7. Relations, Functions & Graphs</option>
-          <option value="8">8. Geometry & Trigonometry</option>
-          <option value="9">9. Vectors & Matrices</option>
-        </select>
-        <div>
-          <label>
-            Number of questions (up to 30):
-            <input
-              type="number"
-              min={1}
-              max={30}
-              value={questionCount}
-              onChange={(e) => setQuestionCount(parseInt(e.target.value))}
-            />
-          </label>
-          <p style={{ fontSize: "0.9em", color: "orange" }}>
-            Note: Practice quizzes may contain repeat questions.
-          </p>
+    <div className="content">
+      <div className="custom-mode">
+        <h2>Custom Mode</h2>
+        
+        <div className="section-practice">
+          <h3>Custom Practice Quiz by Section</h3>
+          <label>Select Section for Practice:</label>
+          <select
+            value={selectedSection || ""}
+            onChange={(e) => setSelectedSection(parseInt(e.target.value))}
+          >
+            <option value="" disabled>Select a section</option>
+            <option value="1">1. Number Theory & Computation</option>
+            <option value="2">2. Consumer Arithmetic</option>
+            <option value="3">3. Sets</option>
+            <option value="4">4. Measurement</option>
+            <option value="5">5. Statistics</option>
+            <option value="6">6. Algebra</option>
+            <option value="7">7. Relations, Functions & Graphs</option>
+            <option value="8">8. Geometry & Trigonometry</option>
+            <option value="9">9. Vectors & Matrices</option>
+          </select>
+          <div>
+            <label>
+              Number of questions (up to 30):
+              <input
+                type="number"
+                min={1}
+                max={30}
+                value={questionCount}
+                onChange={(e) => setQuestionCount(parseInt(e.target.value))}
+              />
+            </label>
+            <p style={{ fontSize: "0.9em", color: "orange" }}>
+              Note: Practice quizzes may contain repeat questions.
+            </p>
+          </div>
+          <button disabled={!selectedSection} onClick={startSectionPractice}>
+            Start Practice
+          </button>
         </div>
-        <button disabled={!selectedSection} onClick={startSectionPractice}>
-          Start Practice
-        </button>
-      </div>
-
-      <div style={{ marginTop: "2rem" }}>
-        <button onClick={startCustomExam}>
-          Create a 60-question Custom Exam
-        </button>
-      </div>
-      <div>
-        <label>
-          Set Exam Duration (minutes):&nbsp;
-          <input
-            type="number"
-            min="10"
-            max="180"
-            step="5"
-            value={customTime}
-            onChange={(e) => setCustomTime(parseInt(e.target.value, 10))}
-          />
-        </label>
+        <div className="full-exam">
+          <h3>Custom Paper 1 Full Exam</h3>
+          <button onClick={startCustomExam}>
+            Create a 60-question Custom Exam
+          </button>
+          <div>
+            <label>
+              Set Exam Duration (minutes):&nbsp;
+              <input
+                type="number"
+                min="10"
+                max="180"
+                step="5"
+                value={customTime}
+                onChange={(e) => setCustomTime(parseInt(e.target.value, 10))}
+              />
+            </label>
+          </div>
+        </div>
       </div>
     </div>
-  );
+      );
 }

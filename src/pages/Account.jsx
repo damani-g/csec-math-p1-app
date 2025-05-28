@@ -18,13 +18,15 @@ export default function Account() {
   }
 
   return (
-    <div className="account-container">
-      <h2>My Account</h2>
-      <p><strong>Email:</strong> {user.email}</p>
-      <p><strong>UID:</strong> {user.uid}</p>
-      <button onClick={handleLogout}>Log Out</button>
-      <div>
-        <button><Link to="/progress">My Progress</Link></button>
+    <div className="content">
+      <div className="account-container">
+        <h2>My Account</h2>
+        <p><strong>Email:</strong> {user.email}</p>
+        <p><strong>UID:</strong> {user.uid}</p>
+        <button onClick={handleLogout}>Log Out</button>
+        <div>
+          <button><Link to="/progress">My Progress</Link></button>
+        </div>
       </div>
     </div>
   );
