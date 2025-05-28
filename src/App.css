@@ -72,14 +72,6 @@ a:hover {
 }
 
 
-.mode-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 300px;
-  margin: 2rem auto;
-}
-
 .mode-button {
   display: block;
   padding: 1rem;
@@ -428,6 +420,7 @@ a:hover {
   gap: 1rem;
   width: 100%;
   max-width: 300px;
+  margin: 2rem auto;
 }
 
 .mode-button {
@@ -449,8 +442,6 @@ a:hover {
 nav {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0; /* ensures full width */
   width: 100vw; /* ensures full viewport width */
   background-color: var(--nav-bg);
   color: var(--text);
@@ -492,6 +483,68 @@ nav ul {
 .nav-links a:hover,
 nav button:hover {
   text-decoration: underline;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--nav-bg);
+    padding: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+    opacity: 0;
+    border-bottom: 1px solid var(--nav-border);
+  }
+
+  .nav-links.open {
+    max-height: 400px; /* adjust if needed */
+    opacity: 1;
+  }
+
+  .nav-links a, .nav-links button {
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.nav-links.open {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.nav-links a:hover, .nav-links button:hover {
+  background-color: var(--btn-hover);
+  border-radius: 4px;
 }
 
 /* ===== Custom Page Styling ===== */
