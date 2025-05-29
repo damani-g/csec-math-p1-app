@@ -1,5 +1,4 @@
 // firebaseUtils.js
-import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { doc, getDoc, setDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "./firebase"; // adjust as needed
 import { isSameDay } from "date-fns";
