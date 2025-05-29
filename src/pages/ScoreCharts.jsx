@@ -113,44 +113,49 @@ export default function ScoreCharts({ scores }) {
       </ResponsiveContainer>
 
       <h4>Average Score by Section</h4>
-      <ResponsiveContainer width="100%" height={chartHeight}>
-        <BarChart
-          data={sectionStats}
-          layout={barLayout}
-          margin={{ top: 20, right: 30, left: yAxisWidth, bottom: 5 }}
-        >
-          {isMobile ? (
-            <XAxis
-              type="category"
-              dataKey="section"
-              tick={{ fontSize: tickFontSize }}
-            />
-          ) : (
-            <XAxis
-              type="number"
-              domain={[0, viewPercent ? 100 : "dataMax"]}
-              tick={{ fontSize: tickFontSize }}
-            />
-          )}
-          {isMobile ? (
-            <YAxis type="number" tick={{ fontSize: tickFontSize }} />
-          ) : (
-            <YAxis
-              type="category"
-              dataKey="section"
-              width={yAxisWidth}
-              tick={{
-                fontSize: tickFontSize,
-                width: yAxisWidth,
-                wordBreak: "break-word",
-              }}
-            />
-          )}
-          <Tooltip />
-          <Legend />
-          <Bar dataKey="score" fill="#82ca9d" />
-        </BarChart>
-      </ResponsiveContainer>
+      <div
+        style={isMobile ? { display: "flex", justifyContent: "center" } : {}}
+      >
+        <ResponsiveContainer width="100%" height={chartHeight}>
+          <BarChart
+            data={sectionStats}
+            layout={barLayout}
+            margin={{ top: 20, right: 30, left: yAxisWidth, bottom: 5 }}
+          >
+            {isMobile ? (
+              <XAxis
+                type="category"
+                dataKey="section"
+                tick={{ fontSize: tickFontSize, angle: -45, textAnchor: "end" }}
+                interval={0}
+              />
+            ) : (
+              <XAxis
+                type="number"
+                domain={[0, viewPercent ? 100 : "dataMax"]}
+                tick={{ fontSize: tickFontSize }}
+              />
+            )}
+            {isMobile ? (
+              <YAxis type="number" tick={{ fontSize: tickFontSize }} />
+            ) : (
+              <YAxis
+                type="category"
+                dataKey="section"
+                width={yAxisWidth}
+                tick={{
+                  fontSize: tickFontSize,
+                  width: yAxisWidth,
+                  wordBreak: "break-word",
+                }}
+              />
+            )}
+            <Tooltip />
+            <Legend />
+            <Bar dataKey="score" fill="#82ca9d" />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
     </div>
   );
 }
