@@ -10,7 +10,7 @@ export async function checkIfUserHasAccess(uid, feature) {
     const userSnap = await getDoc(userRef);
     const isPro = userSnap.exists() && userSnap.data().isPro;
     console.log("User doc:", userSnap.data());
-    
+
     if (isPro) {
       return true; // ✅ Pro user has full access
     }
@@ -60,6 +60,8 @@ export async function checkAccessAndProceed(uid, feature, navigate) {
       else if (feature === "progress") navigate("/progress");
     } else {
       alert("This feature is limited to Pro users or you've hit today's usage limit.");
+      if (user) navigate("/account");
+      else navigate("/login");
     }
   } catch (err) {
     console.error("Access check failed:", err);
