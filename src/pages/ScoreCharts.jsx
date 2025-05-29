@@ -116,7 +116,10 @@ export default function ScoreCharts({ scores }) {
       <div
         style={isMobile ? { display: "flex", justifyContent: "center" } : {}}
       >
-        <ResponsiveContainer width="100%" height={chartHeight}>
+        <ResponsiveContainer
+          width={isMobile ? 320 : "100%"}
+          height={chartHeight}
+        >
           <BarChart
             data={sectionStats}
             layout={barLayout}
@@ -151,7 +154,6 @@ export default function ScoreCharts({ scores }) {
               />
             )}
             <Tooltip />
-            <Legend />
             <Bar dataKey="score" fill="#82ca9d" />
           </BarChart>
         </ResponsiveContainer>
