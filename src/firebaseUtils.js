@@ -1,12 +1,9 @@
 // firebaseUtils.js
-import { getAuth } from "firebase/auth";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
-import { useAuth } from "./AuthContext";
 
 // Utility to check Pro access or daily usage limit
-export async function checkAccessAndProceed(feature, navigate) {
-  const auth = getAuth();
-  const user = useAuth();
+export async function checkAccessAndProceed(user, feature, navigate) {
+
 
   if (!user) {
     alert("Please sign in to access this feature.");

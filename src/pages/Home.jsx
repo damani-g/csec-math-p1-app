@@ -6,9 +6,10 @@ import { useState } from "react";
 
 export default function Home() {
   const navigate = useNavigate();
+  const { user } = useAuth();
 
   const handleSelectMode = async (mode) => {
-    checkAccessAndProceed(mode,navigate)
+    checkAccessAndProceed(user, mode, navigate)
   };
 
   return (
