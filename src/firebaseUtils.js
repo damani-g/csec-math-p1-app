@@ -9,7 +9,6 @@ export async function checkIfUserHasAccess(uid, feature) {
     const userRef = doc(db, "users", uid);
     const userSnap = await getDoc(userRef);
     const isPro = userSnap.exists() && userSnap.data().isPro;
-    console.log("User doc:", userSnap.data());
 
     if (isPro) {
       return true; // ✅ Pro user has full access

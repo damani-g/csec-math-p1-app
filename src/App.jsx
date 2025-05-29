@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Quiz from "./pages/Quiz";
 import SelectPaper from "./pages/SelectPaper";
@@ -9,6 +10,10 @@ import Login from "./pages/Login";
 import SignUp from "./pages/Signup";
 import Account from "./pages/Account";
 import Progress from "./pages/Progress";
+import About from "./pages/About";
+import Disclaimer from "./pages/Disclaimer";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Contact from "./pages/Contact";
 import './App.css';
 import { useEffect } from "react";
 import { initGA, logPageView } from "./ga";
@@ -38,7 +43,12 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/account" element={<Account />} />
         <Route path="/progress" element={<Progress />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/disclaimer" element={<Disclaimer />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

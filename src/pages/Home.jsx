@@ -1,7 +1,6 @@
 import { useAuth } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
-import { checkAccessAndProceed } from "../firebaseUtils";
-import { useState } from "react";
+import { checkIfUserHasAccess} from "../firebaseUtils";
 
 
 export default function Home() {
@@ -9,8 +8,21 @@ export default function Home() {
   const { user } = useAuth();
 
   const handleSelectMode = async (mode) => {
-    checkAccessAndProceed(user.uid, mode, navigate)
+    if (!user) {
+      alert("Please sign in to access study modes.");
+      navigate("/login");
+      return;
+    }
+
+    const hasAccess = await checkIfUserHasAccess(user.uid, mode);
+    if (hasAccess) {
+      navigate(`/${mode}`);
+    } else {
+      alert("This feature is available to Pro users only.");
+      navigate("/account");
+    }
   };
+
 
   return (
     <div className="content">

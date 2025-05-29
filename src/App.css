@@ -584,3 +584,32 @@ nav button:hover {
 .full-exam * {
   margin: 0.25rem 0;
 }
+
+/* ===== Footer Styling ===== */
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: gray;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 1;
+}
+/* ===== Contact Page Styling ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--btn-border);
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+}
