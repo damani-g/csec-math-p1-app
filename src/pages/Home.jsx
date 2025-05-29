@@ -1,17 +1,14 @@
 import { useAuth } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
+import { checkAccessAndProceed } from "../firebaseUtils";
+import { useState } from "react";
+
 
 export default function Home() {
-  const { user } = useAuth();
   const navigate = useNavigate();
 
-  const handleSelectMode = (mode) => {
-    if (!user) {
-      alert("Please sign in to access study modes.");
-      navigate("/login"); // or open modal
-      return;
-    }
-    navigate(`/${mode}`);
+  const handleSelectMode = async (mode) => {
+    checkAccessAndProceed(mode,navigate)
   };
 
   return (
