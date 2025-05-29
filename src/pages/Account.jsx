@@ -23,7 +23,7 @@ export default function Account() {
         <h2>My Account</h2>
         <p><strong>Email:</strong> {user.email}</p>
         <p><strong>UID:</strong> {user.uid}</p>
-        <p><strong>Account Type:</strong>{user?.pro ? "Pro" : "Free"}</p>
+        <p><strong>Account Type:</strong> {user.isPro ? "Pro" : "Free"}</p>
         <button onClick={handleLogout}>Log Out</button>
         <div>
           <button><Link to="/progress">My Progress</Link></button>
