@@ -13,6 +13,7 @@ import Progress from "./pages/Progress";
 import About from "./pages/About";
 import Disclaimer from "./pages/Disclaimer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Membership from "./pages/Membership";
 import Contact from "./pages/Contact";
 import './App.css';
 import { useEffect } from "react";
@@ -47,6 +48,7 @@ function App() {
         <Route path="/disclaimer" element={<Disclaimer />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/membership" element={<Membership />} />
       </Routes>
       <Footer />
     </Router>

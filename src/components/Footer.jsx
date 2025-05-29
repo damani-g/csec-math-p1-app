@@ -6,7 +6,8 @@ export default function Footer() {
       <Link to="/about">About</Link> |{" "}
       <Link to="/privacy">Privacy Policy</Link> |{" "}
       <Link to="/disclaimer">Disclaimer</Link> |{" "}
-      <Link to="/contact">Contact Us</Link>
+      <Link to="/contact">Contact Us</Link> |{" "}
+      <Link to="/membership">Membership</Link> 
     </footer>
   );
 }

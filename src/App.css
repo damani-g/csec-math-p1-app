@@ -613,3 +613,22 @@ nav button:hover {
   background-color: var(--btn-bg);
   color: var(--btn-text);
 }
+
+/* ===== Membership Page Styling ===== */
+.membership-status {
+  background-color: var(--btn-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.membership-status ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  line-height: 1.6;
+}
+
+.pro-features {
+  list-style: none;
+}
