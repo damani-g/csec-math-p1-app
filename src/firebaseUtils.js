@@ -20,7 +20,9 @@ export async function checkAccessAndProceed(user, feature, navigate) {
   const now = new Date();
   const today = now.toISOString().slice(0, 10);
 
-  if (isPro) return; // Pro has access to everything
+  if (isPro) {
+    navigate(`/${feature}`)
+  } // Pro has access to everything
 
   if (feature === "mock") {
     const usage = userData?.usage || {};
