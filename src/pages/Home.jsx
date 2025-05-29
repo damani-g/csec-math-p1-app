@@ -9,7 +9,7 @@ export default function Home() {
   const { user } = useAuth();
 
   const handleSelectMode = async (mode) => {
-    checkAccessAndProceed(user, mode, navigate)
+    checkAccessAndProceed(user.uid, mode, navigate)
   };
 
   return (
