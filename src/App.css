@@ -18,6 +18,25 @@
   --selected-text: #fff;
   --correct-bg: #4caf50;
   --incorrect-bg: #f44336;
+  /* Membership page variables */
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --benefit-bg: #ffffff;
+  --benefit-text: #2c5282;
+  --price-bg: #2c5282;
+  --price-text: #ffffff;
+  --payment-bg: #ffffff;
+  --payment-option-bg: #f8f9fa;
+  --payment-text: #666666;
+  --bank-details-bg: #ffffff;
+  --bank-border: #e2e8f0;
+  --bank-text: #4a5568;
+  --button-primary-bg: #4299e1;
+  --button-primary-text: #ffffff;
+  --button-primary-hover: #3182ce;
+  --pro-status-bg: #c6f6d5;
+  --pro-status-text: #2f855a;
+  --divider-color: #e2e8f0;
 }
 
 body.dark {
@@ -33,6 +52,25 @@ body.dark {
   --selected-text: #222;
   --correct-bg: #4caf50;
   --incorrect-bg: #f44336;
+  /* Membership page dark mode variables */
+  --card-bg: #1e1e1e;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --benefit-bg: #2d3748;
+  --benefit-text: #63b3ed;
+  --price-bg: #2a4365;
+  --price-text: #ffffff;
+  --payment-bg: #1e1e1e;
+  --payment-option-bg: #2d3748;
+  --payment-text: #e2e8f0;
+  --bank-details-bg: #2d3748;
+  --bank-border: #4a5568;
+  --bank-text: #e2e8f0;
+  --button-primary-bg: #3182ce;
+  --button-primary-text: #ffffff;
+  --button-primary-hover: #2c5282;
+  --pro-status-bg: #1c4532;
+  --pro-status-text: #9ae6b4;
+  --divider-color: #4a5568;
 }
 
 body {
@@ -631,4 +669,282 @@ nav button:hover {
 
 .pro-features {
   list-style: none;
+}
+
+/* Membership Page Styles */
+.membership-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.pro-benefits {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 15px var(--card-shadow);
+}
+
+.pro-benefits .lead {
+  color: var(--text);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.benefit-card {
+  padding: 1.5rem;
+  background: var(--benefit-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--card-shadow);
+  transition: transform 0.2s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card h4 {
+  color: var(--benefit-text);
+  margin-bottom: 1rem;
+}
+
+.benefit-card p {
+  color: var(--text);
+}
+
+.price-tag {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: var(--price-bg);
+  color: var(--price-text);
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.price-tag h3 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.price-tag p {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+}
+
+.payment-section {
+  background: var(--payment-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px var(--card-shadow);
+}
+
+.payment-options {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.payment-option {
+  padding: 2rem;
+  background: var(--payment-option-bg);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--text);
+}
+
+.payment-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.payment-divider span {
+  background: var(--payment-option-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: var(--payment-text);
+}
+
+.bank-details {
+  margin-top: 1.5rem;
+  text-align: left;
+  background: var(--bank-details-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--bank-border);
+}
+
+.bank-info {
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.bank-info p {
+  margin: 0.5rem 0;
+}
+
+.copy-details-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+.copy-details-btn:hover {
+  background: var(--button-primary-hover);
+}
+
+.show-bank-details-btn {
+  background: none;
+  border: 2px solid var(--button-primary-bg);
+  color: var(--button-primary-bg);
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.show-bank-details-btn:hover {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+}
+
+.instructions {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--divider-color);
+}
+
+.instructions h5 {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.instructions ol {
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  margin: 0.5rem 0;
+  color: var(--bank-text);
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: var(--button-primary-bg);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+
+.link-button:hover {
+  color: var(--button-primary-hover);
+}
+
+.pro-status {
+  text-align: center;
+  padding: 2rem;
+  background: var(--pro-status-bg);
+  border-radius: 8px;
+  color: var(--pro-status-text);
+}
+
+.pro-status h3 {
+  margin-bottom: 1rem;
+}
+
+.login-prompt {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text);
+}
+
+/* PayPal Button Container Styles */
+.paypal-button-container {
+  position: relative;
+  min-height: 150px;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px var(--card-shadow);
+  color: var(--text);
+}
+
+.payment-error {
+  padding: 1rem;
+  background: var(--card-bg);
+  border: 2px solid var(--incorrect-bg);
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.payment-error p {
+  color: var(--incorrect-bg);
+  margin-bottom: 1rem;
+}
+
+.retry-button {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.retry-button:hover {
+  background: var(--button-primary-hover);
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text);
+  font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .payment-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .payment-divider {
+    display: none;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .membership-page {
+    padding: 1rem;
+  }
 }

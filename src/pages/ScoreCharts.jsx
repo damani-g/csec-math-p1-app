@@ -129,7 +129,7 @@ export default function ScoreCharts({ scores }) {
               <XAxis
                 type="category"
                 dataKey="section"
-                tick={{ fontSize: tickFontSize, angle: -45, textAnchor: "end" }}
+                tick={{ fontSize: tickFontSize, angle: -90, textAnchor: "end" }}
                 interval={0}
               />
             ) : (
