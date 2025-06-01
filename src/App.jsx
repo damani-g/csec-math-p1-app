@@ -15,6 +15,7 @@ import Disclaimer from "./pages/Disclaimer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Membership from "./pages/Membership";
 import Contact from "./pages/Contact";
+import GettingStarted from "./pages/GettingStarted";
 import './App.css';
 import { useEffect } from "react";
 import { initGA, logPageView } from "./ga";
@@ -49,6 +50,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPolicy />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/membership" element={<Membership />} />
+        <Route path="/getting-started" element={<GettingStarted />} />
       </Routes>
       <Footer />
     </Router>
