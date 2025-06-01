@@ -54,6 +54,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
+import { checkIfUserHasAccess } from "../firebaseUtils";
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -77,6 +78,22 @@ export default function Navbar() {
     }
   };
 
+  const handleSelectMode = async (mode) => {
+    if (!user) {
+      alert("Please sign in to access study modes.");
+      navigate("/login");
+      return;
+    }
+
+    const hasAccess = await checkIfUserHasAccess(user.uid, mode);
+    if (hasAccess) {
+      navigate(`/${mode}`);
+    } else {
+      alert("This feature is available to Pro users only.");
+      navigate("/account");
+    }
+  };
+
   return (
     <nav>
       <button className="hamburger" onClick={toggleMenu}>
@@ -93,9 +110,9 @@ export default function Navbar() {
 
       <div className={`nav-links ${isOpen ? 'open' : ''}`}>
         <Link to="/" onClick={closeMenu}>Home</Link>
-        <button onClick={() => handleProtectedLink("/mock")}>Mock Exam</button>
-        <button onClick={() => handleProtectedLink("/practice")}>Practice</button>
-        <button onClick={() => handleProtectedLink("/custom")}>Custom</button>
+        <button onClick={() => handleSelectMode("mock")}>Mock Exam</button>
+        <button onClick={() => handleSelectMode("practice")}>Practice</button>
+        <button onClick={() => handleSelectMode("custom")}>Custom</button>
         {!user ? (
           <Link to="/login" onClick={closeMenu}>Sign In</Link>
         ) : (

@@ -20,7 +20,7 @@ export default function Membership() {
 
       const script = document.createElement('script');
       script.src = 'https://www.paypal.com/sdk/js?' + new URLSearchParams({
-        'client-id': 'AbHeSFyBMTn6wx5408EWN3-6Oiyxpjfjg8oMJA1pdHly-XYnzXRKv9JryYMIcnAkI5WPCfirAyJ0193W',
+        'client-id': import.meta.env.VITE_PAYPAL_CLIENT_ID,
         'currency': 'USD',
         'intent': 'capture'
       });

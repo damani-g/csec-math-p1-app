@@ -50,16 +50,16 @@
 
     {"id": "2018_41", "year": 2018, "number": 41, "image": "questions/june2018_41.png", "section": 5, "answer": "B"},
     {"id": "2018_42", "year": 2018, "number": 42, "image": "questions/june2018_42.png", "section": 5, "answer": "C"},
-    {"id": "2018_43", "year": 2018, "number": 43, "image": "questions/june2018_43.png", "section": 5, "answer": "D"},
+    {"id": "2018_43", "year": 2018, "number": 43, "image": "questions/june2018_43.png", "section": 5, "answer": "B"},
     {"id": "2018_44", "year": 2018, "number": 44, "image": "questions/june2018_44.png", "section": 5, "answer": "C"},
 
-    {"id": "2018_45", "year": 2018, "number": 45, "image": "questions/june2018_45.png", "section": 7, "answer": "A"},
-    {"id": "2018_46", "year": 2018, "number": 46, "image": "questions/june2018_46.png", "section": 7, "answer": "D"},
-    {"id": "2018_47", "year": 2018, "number": 47, "image": "questions/june2018_47.png", "section": 7, "answer": "C"},
+    {"id": "2018_45", "year": 2018, "number": 45, "image": "questions/june2018_45.png", "section": 7, "answer": "D"},
+    {"id": "2018_46", "year": 2018, "number": 46, "image": "questions/june2018_46.png", "section": 7, "answer": "C"},
+    {"id": "2018_47", "year": 2018, "number": 47, "image": "questions/june2018_47.png", "section": 7, "answer": "B"},
     {"id": "2018_48", "year": 2018, "number": 48, "image": "questions/june2018_48.png", "section": 7, "answer": "D"},
-    {"id": "2018_49", "year": 2018, "number": 49, "image": "questions/june2018_49.png", "section": 7, "answer": "B"},
-    {"id": "2018_50", "year": 2018, "number": 50, "image": "questions/june2018_50.png", "section": 7, "answer": "A"},
-    {"id": "2018_51", "year": 2018, "number": 51, "image": "questions/june2018_51.png", "section": 7, "answer": "C"},
+    {"id": "2018_49", "year": 2018, "number": 49, "image": "questions/june2018_49.png", "section": 7, "answer": "C"},
+    {"id": "2018_50", "year": 2018, "number": 50, "image": "questions/june2018_50.png", "section": 7, "answer": "D"},
+    {"id": "2018_51", "year": 2018, "number": 51, "image": "questions/june2018_51.png", "section": 7, "answer": "B"},
     {"id": "2018_52", "year": 2018, "number": 52, "image": "questions/june2018_52.png", "section": 7, "answer": "A"},
 
     {"id": "2018_53", "year": 2018, "number": 53, "image": "questions/june2018_53.png", "section": 8, "answer": "C"},
