@@ -1,6 +1,7 @@
 import { useAuth } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
 import { checkIfUserHasAccess} from "../firebaseUtils";
+import { Link } from "react-router-dom";
 
 
 export default function Home() {
@@ -27,12 +28,16 @@ export default function Home() {
   return (
     <div className="content">
       <div className="home-container">
+        <p>
+          First time here? <Link to="/getting-started">Getting Started</Link>
+        </p>
         <h2>Select a Mode</h2>
         <div className="mode-buttons">
           <button className="mode-button" onClick={() => handleSelectMode("mock")}>Mock Exam Mode</button>
           <button className="mode-button" onClick={() => handleSelectMode("custom")}>Custom Exam Mode</button>
           <button className="mode-button" onClick={() => handleSelectMode("practice")}>Practice Mode</button>
         </div>
+
       </div>
     </div>
   );
