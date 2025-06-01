@@ -895,41 +895,6 @@ nav button:hover {
   color: var(--text);
 }
 
-.payment-error {
-  padding: 1rem;
-  background: var(--card-bg);
-  border: 2px solid var(--incorrect-bg);
-  border-radius: 8px;
-  margin: 1rem 0;
-  text-align: center;
-}
-
-.payment-error p {
-  color: var(--incorrect-bg);
-  margin-bottom: 1rem;
-}
-
-.retry-button {
-  background: var(--button-primary-bg);
-  color: var(--button-primary-text);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-}
-
-.retry-button:hover {
-  background: var(--button-primary-hover);
-}
-
-.loading {
-  padding: 2rem;
-  text-align: center;
-  color: var(--text);
-  font-style: italic;
-}
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .payment-options {
