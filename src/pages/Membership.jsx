@@ -22,12 +22,7 @@ export default function Membership() {
       script.src = 'https://www.paypal.com/sdk/js?' + new URLSearchParams({
         'client-id': import.meta.env.VITE_PAYPAL_CLIENT_ID,
         'currency': 'USD',
-        'intent': 'capture',
-        'disable-funding': 'credit,card,venmo',
-        // Enable buyer country - this can help with authorization
-        'buyer-country': 'TT',
-        // Enable debug mode in development
-        ...(import.meta.env.DEV ? { 'debug': 'true' } : {})
+        'intent': 'capture'
       });
       script.async = true;
       
