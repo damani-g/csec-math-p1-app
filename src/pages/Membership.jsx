@@ -54,8 +54,8 @@ export default function Membership() {
 
   const copyBankDetails = () => {
     const bankDetails = `Bank: Republic Bank
-Account Name: CSEC Math Account
-Account Number: 1234567890
+Account Name: Damani Garcia
+Account Number: 460055281801
 Reference: ${user?.email || 'Your Email'}`;
     
     navigator.clipboard.writeText(bankDetails)
@@ -93,7 +93,7 @@ Reference: ${user?.email || 'Your Email'}`;
           </div>
 
           <div className="price-tag">
-            <h3>$14 USD</h3>
+            <h3>$100 TTD or $14 USD</h3>
             <p>One-time payment for full access</p>
           </div>
         </div>
@@ -137,8 +137,8 @@ Reference: ${user?.email || 'Your Email'}`;
                     <div className="bank-details">
                       <div className="bank-info">
                         <p><strong>Bank:</strong> Republic Bank</p>
-                        <p><strong>Account Name:</strong> CSEC Math Account</p>
-                        <p><strong>Account Number:</strong> 1234567890</p>
+                        <p><strong>Account Name:</strong> Damani Garcia</p>
+                        <p><strong>Account Number:</strong> 460055281801</p>
                         <p><strong>Reference:</strong> {user.email}</p>
                       </div>
                       <button onClick={copyBankDetails} className="copy-details-btn">
