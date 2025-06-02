@@ -26,7 +26,22 @@ export default function Review() {
   const [showReviewList, setShowReviewList] = useState(true);
 
   if (!questions || !userAnswers) {
-    return <div>Error: No review data available.</div>;
+    return (
+      <div className="content">
+        <div className="review-page">
+          <div className="error-state card">
+            <svg className="icon" viewBox="0 0 24 24" width="48" height="48">
+              <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+            </svg>
+            <h3>No Review Data Available</h3>
+            <p>There was an error loading the quiz review data.</p>
+            <button onClick={() => navigate("/")} className="btn btn-primary">
+              Return to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   const sectionScores = {};
@@ -71,60 +86,130 @@ export default function Review() {
     ? questions.filter(q => q.section === parseInt(activeSection))
     : [];
 
+  const scorePercentage = Math.round((totalCorrect / questions.length) * 100);
+  const scoreGrade = 
+    scorePercentage >= 90 ? 'excellent' :
+    scorePercentage >= 75 ? 'good' :
+    scorePercentage >= 60 ? 'fair' : 'needs-improvement';
+
   return (
     <div className="content">
-      <div className="review-container">
-        <h2>Quiz Review</h2>
-        <button onClick={() => navigate("/")}>Return to Home</button>
-
-        <div className="score-summary">
-          <h3>Total Score: {totalCorrect} / {questions.length} - {Math.round((totalCorrect / questions.length) * 100)}%</h3>
-          <h4>Section Breakdown</h4>
-          <ul>
-            {Object.entries(sectionScores).map(([section, { correct, total }]) => (
-              <li key={section}>
-                <button onClick={() => setActiveSection(section)}>
-                  {SECTION_LABELS[section]} – {correct}/{total} – {Math.round((correct / total) * 100)}%
-                </button>
-              </li>
-            ))}
-          </ul>
+      <div className="review-page">
+        <div className="review-header">
+          <h2>Quiz Review</h2>
+          <p className="lead">Review your answers and see detailed breakdowns by section</p>
         </div>
 
-        {activeSection && (
-          <div className="review-list">
-            <h3>{SECTION_LABELS[activeSection]}</h3>
-            <button onClick={() => setShowReviewList(!showReviewList)}>
-              {showReviewList ? "Hide" : "Show"} Questions for {SECTION_LABELS[activeSection]}
-            </button>
-            {showReviewList && filteredQuestions.map((q, index) => {
-              const userAnswer = userAnswers[q.id];
-              const isCorrect = userAnswer === q.answer;
+        <div className="review-content">
+          <div className="score-overview card">
+            <div className="total-score">
+              <div className={`score-circle ${scoreGrade}`}>
+                <span className="percentage">{scorePercentage}%</span>
+                <span className="fraction">{totalCorrect}/{questions.length}</span>
+              </div>
+              <h3>Total Score</h3>
+            </div>
 
-              return (
-                <div key={q.id} className={`review-item ${isCorrect ? "correct" : "incorrect"}`}>
-                  <h4>
-                    Question {questions.indexOf(q) + 1} {isCorrect ? "✅" : "❌"}
-                  </h4>
-                  {q.stimulus_id && (
-                    <img
-                      src={`/questions/${q.stimulus_id}.png`}
-                      alt={`Stimulus for ${q.id}`}
-                      className="stimulus-image"
-                    />
-                  )}
-                  <img
-                    src={`/${q.image}`}
-                    alt={`Question ${q.id}`}
-                    className="question-image"
-                  />
-                  <p>Your answer: <strong>{userAnswer || "None selected"}</strong></p>
-                  <p>Correct answer: <strong>{q.answer}</strong></p>
-                </div>
-              );
-            })}
+            <div className="section-breakdown">
+              <h4>Section Breakdown</h4>
+              <div className="section-grid">
+                {Object.entries(sectionScores).map(([section, { correct, total }]) => {
+                  const sectionPercentage = Math.round((correct / total) * 100);
+                  return (
+                    <button
+                      key={section}
+                      onClick={() => setActiveSection(section)}
+                      className={`section-card ${activeSection === section ? 'active' : ''}`}
+                    >
+                      <div className="section-header">
+                        <span className="section-name">{SECTION_LABELS[section]}</span>
+                        <span className="section-score">{sectionPercentage}%</span>
+                      </div>
+                      <div className="progress-bar">
+                        <div 
+                          className="progress-fill"
+                          style={{width: `${sectionPercentage}%`}}
+                        ></div>
+                      </div>
+                      <div className="section-details">
+                        <span>{correct}/{total} correct</span>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
-        )}
+
+          {activeSection && (
+            <div className="section-review card">
+              <div className="review-header">
+                <h3>{SECTION_LABELS[activeSection]}</h3>
+                <button 
+                  onClick={() => setShowReviewList(!showReviewList)}
+                  className="btn btn-secondary"
+                >
+                  {showReviewList ? 'Hide' : 'Show'} Questions
+                </button>
+              </div>
+
+              {showReviewList && (
+                <div className="questions-list">
+                  {filteredQuestions.map((q) => {
+                    const userAnswer = userAnswers[q.id];
+                    const isCorrect = userAnswer === q.answer;
+                    const questionNumber = questions.indexOf(q) + 1;
+
+                    return (
+                      <div key={q.id} className={`question-card ${isCorrect ? 'correct' : 'incorrect'}`}>
+                        <div className="question-header">
+                          <span className="question-number">Question {questionNumber}</span>
+                          <span className={`status-badge ${isCorrect ? 'correct' : 'incorrect'}`}>
+                            {isCorrect ? '✓ Correct' : '✗ Incorrect'}
+                          </span>
+                        </div>
+
+                        <div className="question-content">
+                          {q.stimulus_id && (
+                            <img
+                              src={`/questions/${q.stimulus_id}.png`}
+                              alt={`Stimulus for question ${questionNumber}`}
+                              className="stimulus-image"
+                            />
+                          )}
+                          <img
+                            src={`/${q.image}`}
+                            alt={`Question ${questionNumber}`}
+                            className="question-image"
+                          />
+                        </div>
+
+                        <div className="answer-comparison">
+                          <div className="answer-item">
+                            <span className="answer-label">Your Answer:</span>
+                            <span className={`answer-value ${!userAnswer ? 'no-answer' : ''}`}>
+                              {userAnswer || 'Not answered'}
+                            </span>
+                          </div>
+                          <div className="answer-item">
+                            <span className="answer-label">Correct Answer:</span>
+                            <span className="answer-value correct">{q.answer}</span>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+
+          <div className="review-actions">
+            <button onClick={() => navigate("/")} className="btn btn-primary">
+              Return to Home
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );
