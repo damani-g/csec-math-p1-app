@@ -22,7 +22,9 @@ export default function Membership() {
       script.src = 'https://www.paypal.com/sdk/js?' + new URLSearchParams({
         'client-id': import.meta.env.VITE_PAYPAL_CLIENT_ID,
         'currency': 'USD',
-        'intent': 'capture'
+        'intent': 'capture',
+        'components': 'buttons',
+        'disable-funding': 'paylater,venmo,card'
       });
       script.async = true;
       

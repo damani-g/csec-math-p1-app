@@ -50,9 +50,10 @@ export default function PayPalCheckout() {
     window.paypal.Buttons({
       style: {
         layout: 'vertical',
-        color: 'gold',
         shape: 'rect',
-        label: 'pay'
+        color: 'gold',
+        height: 45,
+        label: 'paypal'
       },
       createOrder: (data, actions) => {
         return actions.order.create({
@@ -101,7 +102,9 @@ export default function PayPalCheckout() {
       <div ref={paypalButtonRef} className="paypal-button-container" style={{
         backgroundColor: 'var(--payment-option-bg)',
         padding: '1rem',
-        borderRadius: '8px'
+        borderRadius: '8px',
+        maxWidth: '350px',
+        margin: '0 auto'
       }}></div>
     </div>
   );
