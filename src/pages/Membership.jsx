@@ -22,9 +22,7 @@ export default function Membership() {
       script.src = 'https://www.paypal.com/sdk/js?' + new URLSearchParams({
         'client-id': import.meta.env.VITE_PAYPAL_CLIENT_ID,
         'currency': 'USD',
-        'intent': 'capture',
-        'components': 'buttons',
-        'disable-funding': 'paylater,venmo,card'
+        'intent': 'capture'
       });
       script.async = true;
       
@@ -127,7 +125,17 @@ Reference: ${user?.email || 'Your Email'}`;
 
                 <div className="payment-option offline">
                   <h4>Bank Transfer</h4>
-                  <p>Local payment option • Manual activation within 24 hours</p>
+                  <p>Local payment option • Same day activation upon receipt of payment</p>
+                  
+                  <div className="payment-instructions">
+                    <h5>How to Pay:</h5>
+                    <ol>
+                      <li>Make a payment of $100 TTD to the bank account below</li>
+                      <li>Use your email address ({user.email}) as the payment reference</li>
+                      <li>Keep your receipt for verification</li>
+                    </ol>
+                  </div>
+
                   <button 
                     className="show-bank-details-btn"
                     onClick={() => setShowBankDetails(!showBankDetails)}
@@ -150,9 +158,9 @@ Reference: ${user?.email || 'Your Email'}`;
                         <h5>After Payment:</h5>
                         <ol>
                           <li>Save your payment receipt</li>
-                          <li>Contact us via WhatsApp or <button onClick={handleContact} className="link-button">Contact Form</button></li>
+                          <li>Contact us via <a href="mailto:csecmathapp@gmail.com" className="link-button">email</a> or <button onClick={handleContact} className="link-button">Contact Form</button></li>
                           <li>Include your email and payment proof</li>
-                          <li>We'll activate your account within 24 hours</li>
+                          <li>We'll activate your account within 2-4 hours (usually much faster, but may take longer for overnight payments)</li>
                         </ol>
                       </div>
                     </div>

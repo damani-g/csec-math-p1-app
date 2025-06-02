@@ -64,11 +64,25 @@ export default function PayPalCheckout() {
               currency_code: "USD",
               value: PRICE
             }
-          }]
+          }],
+          application_context: {
+            shipping_preference: 'NO_SHIPPING'
+          }
+        }).catch(err => {
+          console.error('Order creation error:', err);
+          if (err.message.includes('403')) {
+            alert('There was an error connecting to PayPal. Please try again later or contact support.');
+          } else {
+            alert('There was an error creating your order. Please try again.');
+          }
+          throw err;
         });
       },
       onApprove: async (data, actions) => {
         try {
+          // Show loading state
+          paypalButtonRef.current.style.opacity = '0.5';
+          
           // Capture the order
           const order = await actions.order.capture();
           
@@ -84,16 +98,32 @@ export default function PayPalCheckout() {
         } catch (error) {
           console.error("PayPal payment error:", error);
           alert("There was an error processing your payment. Please try again or contact support.");
+        } finally {
+          // Reset loading state
+          if (paypalButtonRef.current) {
+            paypalButtonRef.current.style.opacity = '1';
+          }
         }
       },
       onError: (err) => {
         console.error("PayPal error:", err);
-        alert("There was an error setting up the payment. Please try again later.");
+        // Check for specific error types
+        if (err.message && err.message.includes('403')) {
+          alert('There was an error connecting to PayPal. Please ensure you have a valid PayPal account and try again.');
+        } else {
+          alert("There was an error setting up the payment. Please try again later or contact support.");
+        }
       },
       onCancel: () => {
-        console.log("Payment cancelled");
+        console.log("Payment cancelled by user");
       }
-    }).render(paypalButtonRef.current);
+    }).render(paypalButtonRef.current)
+      .catch(err => {
+        console.error("PayPal render error:", err);
+        if (paypalButtonRef.current) {
+          paypalButtonRef.current.innerHTML = 'Could not load PayPal payment system. Please refresh the page or try again later.';
+        }
+      });
 
   }, [user]);
 
