@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://csecmathapp.vercel.app/sitemap.xml
+
+# Prevent indexing of user-specific pages
+Disallow: /account
+Disallow: /progress 
