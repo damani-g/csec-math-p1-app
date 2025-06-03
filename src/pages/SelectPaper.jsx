@@ -9,9 +9,9 @@ const papers = [
   { id: 'jan2021', name: 'January 2021' },
   { id: 'june2021', name: 'June 2021' },
   { id: 'jan2022', name: 'January 2022' },
-  { id: 'june2022', name: 'June 2022' },
-  { id: 'june2023', name: 'June 2023' },
-  { id: 'jan2024', name: 'January 2024' },
+  // { id: 'june2022', name: 'June 2022' },
+  // { id: 'june2023', name: 'June 2023' },
+  // { id: 'jan2024', name: 'January 2024' },
 ];
 
 export default function SelectPaper({mode}) {
