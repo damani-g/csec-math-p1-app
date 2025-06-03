@@ -1050,7 +1050,7 @@ a:hover {
   .nav-link:active,
   .account-dropdown-toggle:active,
   .dropdown-item:active {
-    background-color: var(--btn-hover);
+  background-color: var(--btn-hover);
   }
 
   .sign-in {
@@ -1516,7 +1516,7 @@ a:hover {
     grid-template-columns: 1fr;
     gap: var(--space-md);
   }
-
+  
   .payment-divider {
     padding: var(--space-xs) 0;
   }
@@ -2247,6 +2247,169 @@ button.loading {
   }
 
   .auth-card {
+    padding: var(--space-md);
+  }
+}
+
+/* ===== Getting Started Page Styles ===== */
+.getting-started {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.welcome-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.welcome-header h1 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-sm);
+  color: var(--text);
+}
+
+.intro-text {
+  color: var(--text);
+  font-size: var(--font-size-lg);
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.study-modes {
+  margin-bottom: var(--space-xl);
+}
+
+.study-modes h2 {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--text);
+}
+
+.mode-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.mode-card {
+  background: var(--card-bg);
+  padding: var(--space-lg);
+  border-radius: 12px;
+  box-shadow: 0 2px 15px var(--card-shadow);
+  transition: transform 0.2s ease;
+}
+
+.mode-card:hover {
+  transform: translateY(-2px);
+}
+
+.mode-card h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+  color: var(--text);
+  font-size: var(--font-size-lg);
+}
+
+.mode-card p {
+  color: var(--text);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.pro-badge {
+  background: var(--primary-500);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-left: var(--space-xs);
+}
+
+.workflow-section {
+  background: var(--card-bg);
+  padding: var(--space-lg);
+  border-radius: 12px;
+  box-shadow: 0 2px 15px var(--card-shadow);
+  margin-bottom: var(--space-xl);
+}
+
+.workflow-section h2 {
+  color: var(--text);
+  margin-bottom: var(--space-md);
+}
+
+.workflow-steps ul {
+  list-style: none;
+  padding: 0;
+}
+
+.workflow-steps li {
+  color: var(--text);
+  padding: var(--space-sm) 0;
+  padding-left: var(--space-lg);
+  position: relative;
+  opacity: 0.9;
+}
+
+.workflow-steps li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--primary-500);
+  font-weight: bold;
+}
+
+.workflow-steps a {
+  color: var(--primary-500);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.workflow-steps a:hover {
+  text-decoration: underline;
+}
+
+.help-section {
+  text-align: center;
+  padding: var(--space-lg);
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 15px var(--card-shadow);
+}
+
+.help-section h2 {
+  color: var(--text);
+  margin-bottom: var(--space-sm);
+}
+
+.help-section p {
+  color: var(--text);
+  opacity: 0.9;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .getting-started {
+    padding: var(--space-sm);
+  }
+
+  .mode-cards {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .mode-card {
+    padding: var(--space-md);
+  }
+
+  .workflow-section,
+  .help-section {
     padding: var(--space-md);
   }
 }

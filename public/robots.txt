@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://csecmathapp.vercel.app/sitemap.xml
+Sitemap: https://csec-math-p1-app.vercel.app/sitemap.xml
 
 # Prevent indexing of user-specific pages
 Disallow: /account
